@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="../src/assets/WFM-Favicon.png" />
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link rel="stylesheet" href="../src/output.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="lg:flex items-start">
+        <div class="w-2xs left_sidebar lg:pt-10 pt-3 lg:pl-4 pl-4">
+          <div class="logo">
+            <a href="#"
+              ><img src="../src/assets/WFM-logo.svg" alt="WFM-logo "
+            /></a>
+          </div>
+          <div class="lg:hidden sidebar_toggle" id="sidebar_toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="lg:mt-13 left_sidebar_menu">
+            <li>
+              <a
+                href="./dashboard-overview.html"
+                class="flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/overview.png"
+                  class="mr-2"
+                  alt="overview"
+                />
+                Overview</a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-jobs.html"
+                class="flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/briefcase.svg"
+                  class="mr-2"
+                  alt="briefcase"
+                />
+                Jobs</a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-approval-requests.html"
+                class="flex items-center justify-between py-3 pr-1 rounded-lg mb-4 sub_menu"
+                ><img
+                  src="../src/assets/sub-menu-img.svg"
+                  class=""
+                  alt="briefcase"
+                />
+                Approval Requests <span class="bc-emerald-100 emerald-800 font-10 flex items-center justify-center font-semibold h-5 w-5 rounded-full">5</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-candidates.html"
+                class="flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/candidates.png"
+                  class="mr-2"
+                  alt="candidates"
+                />
+                Candidates</a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-team.html"
+                class="flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/people.png"
+                  class="mr-2"
+                  alt="people"
+                />
+                Team</a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-profile.html"
+                class="bc-neutral-100 flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/profile.png"
+                  class="mr-2"
+                  alt="profile"
+                />
+                Profile</a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-settings.html"
+                class="flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/setting.png"
+                  class="mr-2"
+                  alt="setting"
+                />
+                Settings</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div
+          class="lg:mt-12 md:mt-10 mt-5 lg:ml-14 w-full lg:pr-40 lg:pl-0 pl-4 pr-4"
+        >
+          <h1 class="md:text-2xl text-xl gray-600 font-bold capitalize">
+            Profile
+          </h1>
+          <div
+            class="rounded-md border-gray-200 sm:p-5 p-3 sm:mt-6 mt-3 sm:flex items-center justify-between"
+          >
+            <div class="flex items-center">
+              <div class="mr-4">
+                <img src="../src/assets/logo.png" width="120" alt="logo" />
+              </div>
+              <div>
+                <h5 class="capitalize text-2xl font-semibold gray-700">
+                  PolySwap
+                </h5>
+                <p class="emerald-800 font-semibold">San Fransisco, US</p>
+              </div>
+            </div>
+            <div class="flex items-center sm:mt-0 mt-2">
+              <button
+                type="button"
+                name="edit_profile"
+                class="sm:ml-4 capitalize flex items-center justify-between bc-gray-100 px-3 py-2.5 rounded-lg gray-800 font-semibold popup-open"
+              >
+                Edit profile
+              </button>
+              <button
+                type="button"
+                class="ml-4 capitalize flex items-center justify-between bc-red-100 px-3 py-2.5 rounded-lg red-800 font-semibold popup-open"
+                name="trash"
+              >
+                Delete Profile
+              </button>
+            </div>
+          </div>
+          <div class="my-4">
+            <ul
+              class="bc-gray-100 rounded-lg inline-flex items-center p-1 switch_btn"
+            >
+              <li
+                class="capitalize text-sm px-4 py-3 gray-800 font-medium flex items-center cursor-pointer rounded-md bg-white"
+              >
+                <span class="mr-2"
+                  ><img src="../src/assets/person.png" alt="person"
+                /></span>
+                <span>Overview</span>
+              </li>
+              <li
+                class="capitalize px-4 py-3 text-sm gray-800 font-medium cursor-pointer rounded-md"
+              >
+                <span>plans</span>
+              </li>
+            </ul>
+          </div>
+          <div class="md:flex md:mb-0 mb-10">
+            <div class="md:w-3/4 md:mr-4">
+              <div class="rounded-md border-gray-200 px-6 py-4">
+                <h6 class="text-lg gray-700 font-semibold mb-6">
+                  Company Details
+                </h6>
+
+                <ul>
+                  <li class="flex items-start mb-4">
+                    <div class="mr-6">
+                      <img src="../src/assets/sms.png" alt="sms" />
+                    </div>
+                    <div>
+                      <div class="gray-500 mb-2 capitalize">Industry</div>
+                      <div class="gray-700 capitalize">Crypto & Finance</div>
+                    </div>
+                  </li>
+                  <li class="flex items-start mb-4">
+                    <div class="mr-6">
+                      <img src="../src/assets/location.png" alt="location" />
+                    </div>
+                    <div>
+                      <div class="gray-500 mb-2 capitalize">Location</div>
+                      <div class="gray-700 capitalize">San Fransisco, US</div>
+                    </div>
+                  </li>
+                  <li class="flex items-start mb-4">
+                    <div class="mr-6">
+                      <img src="../src/assets/call.png" alt="call" />
+                    </div>
+                    <div>
+                      <div class="gray-500 mb-2 capitalize">Company Size</div>
+                      <div class="gray-700 capitalize">20-50</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="md:w-xs md:mt-0 mt-5">
+              <div class="rounded-md border-gray-200">
+                <ul>
+                  <li class="px-4 py-3 flex items-center justify-between">
+                    <div class="flex items-center">
+                      <div class="mr-3">
+                        <img src="../src/assets/linkedin.png" alt="linkedin" />
+                      </div>
+                      <div class="text-sm gra7-700 font-medium">
+                        LinkedIn Profile
+                      </div>
+                    </div>
+                    <div>
+                      <a href="#" class="block">
+                        <img src="../src/assets/export.png" alt="export" />
+                      </a>
+                    </div>
+                  </li>
+                  <li class="px-4 py-3 flex items-center justify-between">
+                    <div class="flex items-center">
+                      <div class="mr-3">
+                        <img
+                          src="../src/assets/globe.png"
+                          alt="Company Website"
+                        />
+                      </div>
+                      <div class="text-sm gra7-700 font-medium">
+                        Company Website
+                      </div>
+                    </div>
+                    <div>
+                      <a href="#" class="block">
+                        <img src="../src/assets/export.png" alt="export" />
+                      </a>
+                    </div>
+                  </li>
+                  <li class="px-4 py-3 flex items-center justify-between">
+                    <div class="flex items-center">
+                      <div class="mr-3">
+                        <img
+                          src="../src/assets/document.png"
+                          alt="whitepaper"
+                        />
+                      </div>
+                      <div class="text-sm gra7-700 font-medium">Whitepaper</div>
+                    </div>
+                    <div>
+                      <a
+                        href="#"
+                        class="block capitalize px-4 py-3 bc-emerald-100 emerald-700 rounded-md"
+                      >
+                        View Doc
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="popups" class="hidden">
+      <div class="popups">
+        <div id="trash" class="hidden popup-content text-center">
+          <div>
+            <img
+              src="../src/assets/exclamation-triangle.svg"
+              alt="exclamation-triangle"
+              class="mx-auto md:w-auto w-16"
+            />
+          </div>
+          <h6 class="text-2xl gray-700 font-semibold mb-3">
+            You’re about to delete your company profile
+          </h6>
+          <p class="gray-400">Are you sure you want to delete this profile?</p>
+          <div class="md:mt-9 mt-5">
+            <button
+              class="capitalize bc-emerald-700 md:py-3.5 py-2.5 px-4 rounded-md text-white md:w-3xs w-full md:inline-block block text-center md:mr-12 font-semibold hide_popup"
+            >
+              No, Don’t Delete
+            </button>
+            <button
+              class="capitalize bc-red-100 md:py-3.5 py-2.5 px-4 rounded-md red-800 md:w-3xs w-full md:inline-block block text-center md:mt-0 mt-3 font-semibold"
+            >
+              Yes, Delete
+            </button>
+          </div>
+        </div>
+        <div id="edit_profile" class="hidden popup-content lg:min-w-3xl">
+          <div class="md:pb-4 pb-2 flex items-center justify-between border-b">
+            <h2 class="text-lg gray-600 font-semibold">Edit Company Profile</h2>
+            <button type="button" class="hide_popup">
+              <img src="../src/assets/close.png" alt="" />
+            </button>
+          </div>
+          <div class="md:grid grid-cols-2 gap-4 md:mt-5 mt-3">
+            <div class="form-group mb-4">
+              <div class="mb-2.5">
+                <label for="company-name" class="text-sm font-bold gray-800"
+                  >Company Name</label
+                >
+              </div>
+              <input
+                type="text"
+                class="form-control px-4 py-3.5 rounded-md border w-full"
+                id="company-name"
+                autocomplete="off"
+                placeholder="Polyswap"
+              />
+            </div>
+            <div class="form-group mb-4">
+              <div class="mb-2.5">
+                <label for="industry" class="text-sm font-bold gray-800"
+                  >Industry</label
+                >
+              </div>
+              <select
+                id="industry"
+                class="form-control px-4 py-3.5 rounded-md border w-full"
+              >
+                <option value="" selected>eg. Agriculture</option>
+                <option value="Eg. Agriculture">Eg. Agriculture</option>
+              </select>
+            </div>
+            <div class="form-group mb-4">
+              <div class="mb-2.5">
+                <label for="country" class="text-sm font-bold gray-800"
+                  >Country</label
+                >
+              </div>
+              <input
+                type="text"
+                class="form-control px-4 py-3.5 rounded-md border w-full"
+                id="country"
+                autocomplete="off"
+                placeholder="eg. United States"
+              />
+            </div>
+            <div class="form-group mb-4">
+              <div class="mb-2.5">
+                <label for="address" class="text-sm font-bold gray-800"
+                  >Address</label
+                >
+              </div>
+              <input
+                type="text"
+                class="form-control px-4 py-3.5 rounded-md border w-full"
+                id="address"
+                autocomplete="off"
+                placeholder="Your address"
+              />
+            </div>
+            <div class="form-group mb-4">
+              <div class="mb-2.5">
+                <label for="company-size" class="text-sm font-bold gray-800"
+                  >Company Size</label
+                >
+              </div>
+              <select
+                id="company-size"
+                class="form-control px-4 py-3.5 rounded-md border w-full"
+              >
+                <option value="" selected>Eg. 1-5</option>
+                <option value="Eg. 1-5">Eg. 1-5</option>
+              </select>
+            </div>
+            <div class="form-group mb-4">
+              <div class="mb-2.5">
+                <label for="linkedin-link" class="text-sm font-bold gray-800"
+                  >Linkedin Profile Link</label
+                >
+              </div>
+              <input
+                type="url"
+                class="form-control px-4 py-3.5 rounded-md border w-full"
+                id="linkedin-link"
+                autocomplete="off"
+                placeholder="eg. https://linked.in/polyswap"
+              />
+            </div>
+            <div class="form-group mb-4">
+              <div class="mb-2.5">
+                <label for="company-website" class="text-sm font-bold gray-800"
+                  >Company Website</label
+                >
+              </div>
+              <input
+                type="url"
+                class="form-control px-4 py-3.5 rounded-md border w-full"
+                id="company-website"
+                autocomplete="off"
+                placeholder="https://polyswap.com"
+              />
+            </div>
+          </div>
+          <div class="form-group mb-4">
+            <div class="mb-2.5">
+              <label for="upload-document" class="text-sm font-bold gray-800"
+                >Upload whitepaper/any document (Optional) cc</label
+              >
+            </div>
+            <div class="file_upload_input w-full">
+              <input
+                type="file"
+                class="form-control px-4 py-3.5 rounded-md border"
+                id="upload-document"
+                autocomplete="off"
+                placeholder="eg. +1 234 567 890"
+              />
+              <div class="font-semibold text-center">
+                <p id="cover_letter_uploaded_file"></p>
+                <span class="gray-800"> Drop your files here or</span>
+                <span class="blue-500">browse</span>
+                <p class="gray-400 font-medium">Maximum size: 50MB</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <button
+              class="capitalize bc-emerald-700 md:py-3.5 py-2.5 px-4 rounded-md text-white md:w-auto w-full md:inline-block block text-center md:mr-12 mr-5 font-semibold"
+            >
+              save changes
+            </button>
+            <button
+              class="capitalize bc-gray-100 md:py-3.5 py-2.5 px-4 rounded-lg gray-800 font-semibold md:w-auto w-full hide_popup"
+            >
+              Cancel Operation
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="overlay"></div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="../src/js/index.js"></script>
+    <script src="../src/js/common.js"></script>
+  </body>
+</html>

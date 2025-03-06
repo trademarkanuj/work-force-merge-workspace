@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="../src/assets/WFM-Favicon.png" />
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link rel="stylesheet" href="../src/output.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="lg:flex items-start">
+        <div class="w-2xs left_sidebar lg:pt-10 pt-3 lg:pl-4 pl-4">
+          <div class="logo">
+            <a href="#"
+              ><img src="../src/assets/WFM-logo.svg" alt="WFM-logo "
+            /></a>
+          </div>
+          <div class="lg:hidden sidebar_toggle" id="sidebar_toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="lg:mt-13 left_sidebar_menu">
+            <li>
+              <a
+                href="./dashboard-overview.html"
+                class="flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/overview.png"
+                  class="mr-2"
+                  alt="overview"
+                />
+                Overview</a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-jobs.html"
+                class="flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/briefcase.svg"
+                  class="mr-2"
+                  alt="briefcase"
+                />
+                Jobs</a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-approval-requests.html"
+                class="flex items-center justify-between py-3 pr-1 rounded-lg mb-4 sub_menu"
+                ><img
+                  src="../src/assets/sub-menu-img.svg"
+                  class=""
+                  alt="briefcase"
+                />
+                Approval Requests
+                <span
+                  class="bc-emerald-100 emerald-800 font-10 flex items-center justify-center font-semibold h-5 w-5 rounded-full"
+                  >5</span
+                ></a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-candidates.html"
+                class="flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/candidates.png"
+                  class="mr-2"
+                  alt="candidates"
+                />
+                Candidates</a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-team.html"
+                class="flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/people.png"
+                  class="mr-2"
+                  alt="people"
+                />
+                Team</a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-profile.html"
+                class="flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/profile.png"
+                  class="mr-2"
+                  alt="profile"
+                />
+                Profile</a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-settings.html"
+                class="bc-neutral-100 flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/setting.png"
+                  class="mr-2"
+                  alt="setting"
+                />
+                Settings</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="lg:mt-18 md:mt-10 mt-5 lg:ml-14 w-full lg:pl-0 pl-4">
+          <h1 class="text-2xl gray-600 font-bold capitalize">Settings</h1>
+          <div class="md:flex mt-6">
+            <div class="md:w-1/5">
+              <!-- <ul class="bc-gray-100 rounded-lg switch_btn">
+                <li class="">
+                  <button
+                    class="capitalize text-sm px-4 py-3 gray-800 font-medium flex items-center cursor-pointer rounded-md switch_tabs active"
+                    name="overview"
+                  >
+                    <span class="mr-2"
+                      ><img src="../src/assets/person.png" alt="person"
+                    /></span>
+                    <span>Overview</span>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="capitalize px-4 py-3 text-sm gray-800 font-medium cursor-pointer rounded-md switch_tabs"
+                    name="emails"
+                  >
+                    <span
+                      >emails
+                      <span class="p-1 bc-emerald-100 emerald-800 rounded-full"
+                        >5</span
+                      ></span
+                    >
+                  </button>
+                </li>
+              </ul> -->
+              <ul class="bc-gray-100 p-1 rounded-lg switch_btn">
+                <li class="">
+                  <button
+                    class="capitalize text-sm px-4 w-full py-3 gray-800 font-medium flex items-center cursor-pointer rounded-md switch_tabs active"
+                    name="departments"
+                  >
+                    <span>Departments</span>
+                  </button>
+                </li>
+                <li class="">
+                  <button
+                    class="capitalize text-sm px-4 w-full py-3 gray-800 font-medium flex items-center cursor-pointer rounded-md switch_tabs"
+                    name="permissions"
+                  >
+                    <span>Permissions</span>
+                  </button>
+                </li>
+                <li class="px-4 py-3 text-sm font-medium gray-800">
+                  <span class="">Billing</span>
+                </li>
+              </ul>
+            </div>
+            <div class="md:w-xl md:ml-12 md:mt-0 mt-5">
+              <div id="departments" class="switch_tabs_content">
+                <div class="rounded-md border-gray-200 p-4">
+                  <h6 class="capitalize gray-600 font-semibold text-lg">
+                    Departments
+                  </h6>
+                  <div class="mt-4">
+                    <table class="w-full text-left">
+                      <thead
+                        class="uppercase font-semibold gray-400 text-xs bc-gray-50"
+                      >
+                        <th class="px-3.5 py-2.5">DEPARTMENT</th>
+                        <th class="px-3.5 py-2.5">STATUS</th>
+                        <th class="px-3.5 py-2.5">action</th>
+                      </thead>
+                      <tbody>
+                        <tr class="text-sm gray-700">
+                          <td class="md:px-3.5 px-2.5 md:py-2.5 py-2">
+                            Product
+                          </td>
+                          <td class="md:px-3.5 px-2.5 md:py-2.5 py-2">
+                            <a
+                              class="px-2.5 py-1.5 text-sm font-semibold capitalize rounded-full active_badge"
+                              href="./dashboard-job-details.html"
+                            >
+                              filled</a
+                            >
+                          </td>
+                          <td
+                            class="md:px-3.5 px-2.5 md:py-2.5 py-2 text-base gray-800 font-bold capitalize"
+                          >
+                            <div class="flex items-center justify-between">
+                              <button
+                                class="popup-open"
+                                type="button"
+                                name="edit_department"
+                              >
+                                <img src="../src/assets/edit.svg" alt="edit" />
+                              </button>
+                              <button
+                                type="button"
+                                name="trash"
+                                class="popup-open"
+                              >
+                                <img
+                                  src="../src/assets/trash.svg"
+                                  alt="trash"
+                                />
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr class="text-sm gray-700">
+                          <td class="md:px-3.5 px-2.5 md:py-2.5 py-2">
+                            Engineering
+                          </td>
+                          <td class="md:px-3.5 px-2.5 md:py-2.5 py-2">
+                            <a
+                              class="px-2.5 py-1.5 text-sm font-semibold capitalize rounded-full in_active_badge"
+                              href="./dashboard-job-details.html"
+                            >
+                              filled</a
+                            >
+                          </td>
+                          <td
+                            class="md:px-3.5 px-2.5 md:py-2.5 py-2 text-base gray-800 font-bold capitalize"
+                          >
+                            <div class="flex items-center justify-between">
+                              <button
+                                class="popup-open"
+                                type="button"
+                                name="edit_department"
+                              >
+                                <img src="../src/assets/edit.svg" alt="edit" />
+                              </button>
+                              <button
+                                type="button"
+                                name="trash"
+                                class="popup-open"
+                              >
+                                <img
+                                  src="../src/assets/trash.svg"
+                                  alt="trash"
+                                />
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="mt-4">
+                  <button
+                    type="button"
+                    name="edit_department"
+                    class="capitalize flex items-center justify-between bc-emerald-800 text-white px-10 py-2.5 rounded-lg font-semibold popup-open"
+                  >
+                    <span class="mr-2.5 text-xl">+</span> Add New Department
+                  </button>
+                </div>
+              </div>
+              <div id="permissions" class="switch_tabs_content hidden">
+                <div class="rounded-md border-gray-200 md:p-4 p-2">
+                  <h6 class="capitalize gray-600 font-semibold text-lg mb-4">
+                    permissions
+                  </h6>
+                  <div>
+                    <div class="bc-gray-100 p-2.5">
+                      <div class="capitalize gray-800 text-xs font-medium">
+                        Admin
+                      </div>
+                    </div>
+                    <ul class="md:p-3.5 p-2">
+                      <li class="mt-4">
+                        <label
+                          class="capitalize text-sm gray-300 font-medium disabled"
+                          for="user-role"
+                        >
+                          <input
+                            type="checkbox"
+                            name="user-role"
+                            disabled="disabled"
+                            class="md:mr-4 mr-2"
+                            id="user-role"
+                          />
+                          User & Role Management
+                        </label>
+                      </li>
+                      <li class="mt-4">
+                        <label
+                          class="capitalize text-sm gray-300 font-medium disabled"
+                          for="job-recruitment"
+                        >
+                          <input
+                            type="checkbox"
+                            name="job-recruitment"
+                            class="md:mr-4 mr-2"
+                            disabled="disabled"
+                            id="job-recruitment"
+                          />
+                          Job & Recruitment Management
+                        </label>
+                      </li>
+                      <li class="mt-4">
+                        <label
+                          class="capitalize text-sm gray-300 font-medium disabled"
+                          for="employee-management"
+                        >
+                          <input
+                            type="checkbox"
+                            name="employee-management"
+                            disabled="disabled"
+                            class="md:mr-4 mr-2"
+                            id="employee-management"
+                          />
+                          Employee & HR Data Management
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="md:mt-5 mt-4">
+                    <div class="bc-gray-100 p-2.5">
+                      <div class="capitalize gray-800 text-xs font-medium">
+                        Recruiter
+                      </div>
+                    </div>
+                    <ul class="md:p-3.5 p-2">
+                      <li class="mt-4">
+                        <label
+                          class="capitalize text-sm gray-300 font-medium disabled"
+                          for="user-role"
+                        >
+                          <input
+                            type="checkbox"
+                            name="user-role"
+                            disabled="disabled"
+                            class="md:mr-4 mr-2"
+                            id="user-role"
+                          />
+                          User & Role Management
+                        </label>
+                      </li>
+                      <li class="mt-4">
+                        <label
+                          class="capitalize text-sm gray-300 font-medium"
+                          for="job-recruitment"
+                        >
+                          <input
+                            type="checkbox"
+                            name="job-recruitment"
+                            class="md:mr-4 mr-2"
+                            id="job-recruitment"
+                          />
+                          Job & Recruitment Management
+                        </label>
+                      </li>
+                      <li class="mt-4">
+                        <label
+                          class="capitalize text-sm gray-300 font-medium"
+                          for="employee-management"
+                        >
+                          <input
+                            type="checkbox"
+                            name="employee-management"
+                            class="md:mr-4 mr-2"
+                            id="employee-management"
+                          />
+                          Employee & HR Data Management
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="md:mt-5 mt-4">
+                    <div class="bc-gray-100 p-2.5">
+                      <div class="capitalize gray-800 text-xs font-medium">
+                        Employee
+                      </div>
+                    </div>
+                    <ul class="md:p-3.5 p-2">
+                      <li class="mt-4">
+                        <label
+                          class="capitalize text-sm gray-300 font-medium disabled"
+                          for="user-role"
+                        >
+                          <input
+                            type="checkbox"
+                            name="user-role"
+                            disabled="disabled"
+                            class="md:mr-4 mr-2"
+                            id="user-role"
+                          />
+                          User & Role Management
+                        </label>
+                      </li>
+                      <li class="mt-4">
+                        <label
+                          class="capitalize text-sm gray-300 font-medium disabled"
+                          for="job-recruitment"
+                        >
+                          <input
+                            type="checkbox"
+                            name="job-recruitment"
+                            class="md:mr-4 mr-2"
+                            disabled="disabled"
+                            id="job-recruitment"
+                          />
+                          Job & Recruitment Management
+                        </label>
+                      </li>
+                      <li class="mt-4">
+                        <label
+                          class="capitalize text-sm gray-300 font-medium disabled"
+                          for="employee-management"
+                        >
+                          <input
+                            type="checkbox"
+                            name="employee-management"
+                            disabled="disabled"
+                            class="md:mr-4 mr-2"
+                            id="employee-management"
+                          />
+                          Employee & HR Data Management
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div id="popups" class="hidden">
+      <div class="popups">
+        <div id="trash" class="hidden popup-content text-center">
+          <div>
+            <img
+              src="../src/assets/exclamation-triangle.svg"
+              alt="exclamation-triangle"
+              class="mx-auto md:w-auto w-16"
+            />
+          </div>
+          <h6 class="md:text-2xl text-xl gray-700 font-semibold mb-3">
+            You’re about to delete this job posting
+          </h6>
+          <p class="gray-400">
+            This job posting will no longer be visible and you will loose all
+            data including applied candidates. Are you sure you want to delete?
+          </p>
+          <div class="md:mt-9 mt-5">
+            <button
+              class="capitalize bc-emerald-700 md:py-3.5 py-2.5 px-4 rounded-md text-white md:w-3xs w-full md:inline-block block text-center md:mr-12 font-semibold hide_popup"
+            >
+              No, Don’t Delete Job
+            </button>
+            <button
+              class="capitalize bc-red-100 md:py-3.5 py-2.5 px-4 rounded-md red-800 md:w-3xs w-full md:inline-block block text-center md:mt-0 mt-3 font-semibold"
+            >
+              Yes, Delete Job
+            </button>
+          </div>
+        </div>
+        <div id="edit_department" class="hidden popup-content">
+          <div class="md:pb-4 pb-2 flex items-center justify-between border-b">
+            <h2 class="text-lg gray-600 font-semibold">Add New Department</h2>
+            <button type="button" class="hide_popup">
+              <img src="../src/assets/close.png" alt="" />
+            </button>
+          </div>
+          <form onsubmit="return validateForm()">
+            <div class="form-group mb-4 mt-5">
+              <div class="mb-2.5">
+                <label for="name-department" class="text-sm font-bold gray-800"
+                  >Name of Department</label
+                >
+              </div>
+              <input
+                type="text"
+                class="form-control px-4 py-3.5 rounded-md border w-full"
+                id="name-department"
+                autocomplete="off"
+                placeholder="Hire"
+              />
+            </div>
+            <div class="md:mt-10 mt-5 md:flex justify-between items-center">
+              <button
+                type="submit"
+                class="capitalize bc-emerald-700 md:py-3.5 py-2.5 px-4 rounded-md text-white md:w-auto w-full md:inline-block block text-center font-semibold"
+              >
+                Save New Department
+              </button>
+              <button
+                class="capitalize bc-gray-100 md:py-3.5 py-2.5 px-4 rounded-md gray-800 md:w-auto w-full md:inline-block block text-center md:mt-0 mt-3 font-semibold hide_popup"
+              >
+                Cancel Operation
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="overlay"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="../src/js/form-validation-add-department.js"></script>
+    <script src="../src/js/common.js"></script>
+    <script src="../src/js/index.js"></script>
+  </body>
+</html>

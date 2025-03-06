@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="../src/assets/WFM-Favicon.png" />
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link rel="stylesheet" href="../src/output.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="lg:flex items-start">
+        <div class="w-2xs left_sidebar lg:pt-10 pt-3 lg:pl-4 pl-4">
+          <div class="logo">
+            <a href="#"
+              ><img src="../src/assets/WFM-logo.svg" alt="WFM-logo "
+            /></a>
+          </div>
+          <div class="lg:hidden sidebar_toggle" id="sidebar_toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="lg:mt-13 left_sidebar_menu">
+            <li>
+              <a
+                href="./dashboard-overview.html"
+                class="flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/overview.png"
+                  class="mr-2"
+                  alt="overview"
+                />
+                Overview</a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-jobs.html"
+                class="flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/briefcase.svg"
+                  class="mr-2"
+                  alt="briefcase"
+                />
+                Jobs</a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-approval-requests.html"
+                class="flex items-center justify-between py-3 pr-1 rounded-lg mb-4 sub_menu"
+                ><img
+                  src="../src/assets/sub-menu-img.svg"
+                  class=""
+                  alt="briefcase"
+                />
+                Approval Requests <span class="bc-emerald-100 emerald-800 font-10 flex items-center justify-center font-semibold h-5 w-5 rounded-full">5</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-candidates.html"
+                class="flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/candidates.png"
+                  class="mr-2"
+                  alt="candidates"
+                />
+                Candidates</a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-team.html"
+                class="bc-neutral-100 flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/people.png"
+                  class="mr-2"
+                  alt="people"
+                />
+                Team</a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-profile.html"
+                class="flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/profile.png"
+                  class="mr-2"
+                  alt="profile"
+                />
+                Profile</a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-settings.html"
+                class="flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/setting.png"
+                  class="mr-2"
+                  alt="setting"
+                />
+                Settings</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="lg:mt-18 md:mt-10 mt-5 lg:ml-14 w-full lg:pl-0 pl-4">
+          <h1 class="md:text-2xl text-xl gray-600 font-bold capitalize">
+            Team
+          </h1>
+          <div class="mt-6">
+            <div class="md:grid grid-cols-2 gap-4">
+              <div class="rounded-lg md:p-6 p-3 border-gray-200 md:mt-0 mt-3">
+                <div class="gray-500 md:mb-4 mb-2">Team</div>
+                <div class="font-semibold gray-700 md:text-2xl text-xl">
+                  13 Team Members
+                </div>
+              </div>
+              <div class="rounded-lg md:p-6 p-3 border-gray-200 md:mt-0 mt-3">
+                <div class="gray-500 md:mb-4 mb-2">Positions</div>
+                <div class="font-semibold gray-700 md:text-2xl text-xl">
+                  6 Positions
+                </div>
+              </div>
+            </div>
+            <div class="py-4.5 md:flex items-center justify-between">
+              <div class="sm:flex items-center">
+                <div class="relative drop-down-popup">
+                  <button
+                    name="change-status"
+                    class="capitalize flex items-center sm:justify-between justify-center bc-gray-100 pl-6 pr-12 py-3.5 rounded-lg gray-800 font-semibold sm:w-auto w-full sm:mb-0 mb-3 open-dropdown"
+                  >
+                    <img
+                      src="../src/assets/filter-search.svg"
+                      class="mr-2.5"
+                      alt="filter-search"
+                    />
+                    filter
+                  </button>
+                  <div class="drop-down-popup-box">
+                    <div
+                      class="drop-down-popup-content drop-down-popup-content_left"
+                    >
+                      <div class="flex items-center justify-between py-5">
+                        <div class="gray-700 text-xl font-semibold">
+                          By Job Status
+                        </div>
+                        <div>
+                          <input
+                            type="checkbox"
+                            name="Job Status"
+                            id="job-status"
+                          />
+                        </div>
+                      </div>
+                      <div class="flex items-center justify-between py-5">
+                        <div class="gray-700 text-xl font-semibold">
+                          By creation date
+                        </div>
+                        <div>
+                          <input
+                            type="checkbox"
+                            name="creation date"
+                            id="creation-date"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="overlay close-drop-down"></div>
+                  </div>
+                </div>
+                <div class="sm:ml-4 relative input_with_icon">
+                  <span class="input_icon"
+                    ><img src="../src/assets/search.svg" alt="search"
+                  /></span>
+                  <input
+                    type="text"
+                    class="form-control px-4 py-3.5 rounded-md border w-full"
+                    id="search"
+                    autocomplete="off"
+                    placeholder="Search"
+                  />
+                </div>
+              </div>
+              <button
+                type="button"
+                name="add-team-membered"
+                class="capitalize flex items-center sm:justify-between justify-center bc-emerald-800 text-white px-10 py-2.5 rounded-lg font-semibold md:mt-0 mt-3 sm:w-auto w-full popup-open"
+              >
+                <span class="mr-2.5 text-xl">+</span> Add Team Member
+              </button>
+            </div>
+            <div class="rounded-lg md:p-4 p-3 border-gray-200">
+              <h6 class="capitalize">Team Members</h6>
+              <div class="" style="overflow-x: auto">
+                <table class="w-full text-left">
+                  <thead
+                    class="uppercase font-semibold gray-400 text-xs bc-gray-50"
+                  >
+                    <th class="md:px-3.5 px-2.5 md:py-2.5 py-2">POSITION</th>
+                    <th class="md:px-3.5 px-2.5 md:py-2.5 py-2">ID</th>
+                    <th class="md:px-3.5 px-2.5 md:py-2.5 py-2">NAME</th>
+                    <th class="md:px-3.5 px-2.5 md:py-2.5 py-2">
+                      DATE OF HIRE
+                    </th>
+                    <th class="md:px-3.5 px-2.5 md:py-2.5 py-2">
+                      WORK LOCATION
+                    </th>
+                    <th class="md:px-3.5 px-2.5 md:py-2.5 py-2">
+                      EMPLOYMENT TYPE
+                    </th>
+                    <th class="md:px-3.5 px-2.5 md:py-2.5 py-2">action</th>
+                  </thead>
+                  <tbody>
+                    <tr class="bc-gray-100">
+                      <td colspan="7" class="px-8 py-2">Engineering</td>
+                    </tr>
+                    <tr class="text-sm gray-700">
+                      <td class="md:px-5 px-3 md:py-6 py-3 text-ellipsis">
+                        <a href="./dashboard-team-details.html" class="block">
+                          Frontend Developer</a
+                        >
+                      </td>
+                      <td class="md:px-5 px-3 md:py-6 py-3 font-medium">
+                        <a href="./dashboard-team-details.html" class="block">
+                          PS-E83N</a
+                        >
+                      </td>
+                      <td class="md:px-5 px-3 md:py-6 py-3">
+                        <a
+                          href="./dashboard-team-details.html"
+                          class="flex items-start"
+                        >
+                          <div
+                            class="uppercase bc-teal-100 teal-600 text-xs p-2.5 font-semibold mr-2 rounded-full inline-flex items-center justify-center"
+                          >
+                            JS
+                          </div>
+                          <div>
+                            <div class="text-sm gray-700 font-medium">
+                              John Smith
+                            </div>
+                            <div class="text-xs gray-500">
+                              johnsmith@gmail.com
+                            </div>
+                          </div>
+                        </a>
+                      </td>
+                      <td class="md:px-5 px-3 md:py-6 py-3">
+                        <a href="./dashboard-team-details.html" class="block">
+                          12/01/2025</a
+                        >
+                      </td>
+                      <td class="md:px-5 px-3 md:py-6 py-3">
+                        <a
+                          class="px-2.5 py-1.5 text-sm font-semibold capitalize rounded-full active_badge"
+                          href="./dashboard-team-details.html"
+                        >
+                          On-Site</a
+                        >
+                      </td>
+                      <td class="md:px-5 px-3 md:py-6 py-3">
+                        <a
+                          class="px-2.5 py-1.5 text-sm font-semibold capitalize rounded-full active_badge"
+                          href="./dashboard-team-details.html"
+                        >
+                          Full Time</a
+                        >
+                      </td>
+                      <td
+                        class="md:px-5 px-3 md:py-6 py-3 text-base gray-800 font-bold capitalize"
+                      >
+                        <div class="flex items-center justify-between">
+                          <a href="./dashboard-team-details.html">
+                            <img
+                              src="../src/assets/eye.svg"
+                              alt="eye"
+                              class="min-w-5"
+                            />
+                          </a>
+
+                          <button type="button" name="trash" class="popup-open">
+                            <img
+                              src="../src/assets/trash.svg"
+                              alt="trash"
+                              class="min-w-5"
+                            />
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="text-sm gray-700">
+                      <td class="md:px-5 px-3 md:py-6 py-3 text-ellipsis">
+                        <a href="./dashboard-team-details.html" class="block">
+                          Devops Engineer</a
+                        >
+                      </td>
+                      <td class="md:px-5 px-3 md:py-6 py-3 font-medium">
+                        <a href="./dashboard-team-details.html" class="block">
+                          PS-E83N</a
+                        >
+                      </td>
+                      <td class="md:px-5 px-3 md:py-6 py-3">
+                        <a
+                          href="./dashboard-team-details.html"
+                          class="flex items-start"
+                        >
+                          <div
+                            class="uppercase bc-teal-100 teal-600 text-xs p-2.5 font-semibold mr-2 rounded-full inline-flex items-center justify-center"
+                          >
+                            JS
+                          </div>
+                          <div>
+                            <div class="text-sm gray-700 font-medium">
+                              John Smith
+                            </div>
+                            <div class="text-xs gray-500">
+                              johnsmith@gmail.com
+                            </div>
+                          </div>
+                        </a>
+                      </td>
+                      <td class="md:px-5 px-3 md:py-6 py-3">
+                        <a href="./dashboard-team-details.html" class="block">
+                          12/01/2025</a
+                        >
+                      </td>
+                      <td class="md:px-5 px-3 md:py-6 py-3">
+                        <a
+                          class="px-2.5 py-1.5 text-sm font-semibold capitalize rounded-full violet_badge"
+                          href="./dashboard-team-details.html"
+                        >
+                          Remote</a
+                        >
+                      </td>
+                      <td class="md:px-5 px-3 md:py-6 py-3">
+                        <a
+                          class="px-2.5 py-1.5 text-sm font-semibold capitalize rounded-full active_badge"
+                          href="./dashboard-team-details.html"
+                        >
+                          Full Time</a
+                        >
+                      </td>
+                      <td
+                        class="md:px-5 px-3 md:py-6 py-3 text-base gray-800 font-bold capitalize"
+                      >
+                        <div class="flex items-center justify-between">
+                          <a href="./dashboard-team-details.html">
+                            <img
+                              src="../src/assets/eye.svg"
+                              alt="eye"
+                              class="min-w-5"
+                            />
+                          </a>
+
+                          <button type="button" name="trash" class="popup-open">
+                            <img
+                              src="../src/assets/trash.svg"
+                              alt="trash"
+                              class="min-w-5"
+                            />
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="bc-gray-100">
+                      <td colspan="7" class="px-8 py-2">Product</td>
+                    </tr>
+                    <tr class="text-sm gray-700">
+                      <td class="md:px-5 px-3 md:py-6 py-3 text-ellipsis">
+                        <a href="./dashboard-team-details.html" class="block">
+                          Product Manager</a
+                        >
+                      </td>
+                      <td class="md:px-5 px-3 md:py-6 py-3 font-medium">
+                        <a href="./dashboard-team-details.html" class="block">
+                          PS-E83N</a
+                        >
+                      </td>
+                      <td class="md:px-5 px-3 md:py-6 py-3">
+                        <a
+                          href="./dashboard-team-details.html"
+                          class="flex items-start"
+                        >
+                          <div
+                            class="uppercase bc-teal-100 teal-600 text-xs p-2.5 font-semibold mr-2 rounded-full inline-flex items-center justify-center"
+                          >
+                            JS
+                          </div>
+                          <div>
+                            <div class="text-sm gray-700 font-medium">
+                              John Smith
+                            </div>
+                            <div class="text-xs gray-500">
+                              johnsmith@gmail.com
+                            </div>
+                          </div>
+                        </a>
+                      </td>
+                      <td class="md:px-5 px-3 md:py-6 py-3">
+                        <a href="./dashboard-team-details.html" class="block">
+                          12/01/2025</a
+                        >
+                      </td>
+                      <td class="md:px-5 px-3 md:py-6 py-3">
+                        <a
+                          class="px-2.5 py-1.5 text-sm font-semibold capitalize rounded-full pink_badge"
+                          href="./dashboard-team-details.html"
+                        >
+                          Hybrid</a
+                        >
+                      </td>
+                      <td class="md:px-5 px-3 md:py-6 py-3">
+                        <a
+                          class="px-2.5 py-1.5 text-sm font-semibold capitalize rounded-full pink_badge"
+                          href="./dashboard-team-details.html"
+                        >
+                          Contract</a
+                        >
+                      </td>
+                      <td
+                        class="md:px-5 px-3 md:py-6 py-3 text-base gray-800 font-bold capitalize"
+                      >
+                        <div class="flex items-center justify-between">
+                          <a href="./dashboard-team-details.html">
+                            <img
+                              src="../src/assets/eye.svg"
+                              alt="eye"
+                              class="min-w-5"
+                            />
+                          </a>
+
+                          <button type="button" name="trash" class="popup-open">
+                            <img
+                              src="../src/assets/trash.svg"
+                              alt="trash"
+                              class="min-w-5"
+                            />
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="text-sm gray-700">
+                      <td class="md:px-5 px-3 md:py-6 py-3 text-ellipsis">
+                        <a href="./dashboard-team-details.html" class="block">
+                          Devops Engineer</a
+                        >
+                      </td>
+                      <td class="md:px-5 px-3 md:py-6 py-3 font-medium">
+                        <a href="./dashboard-team-details.html" class="block">
+                          PS-E83N</a
+                        >
+                      </td>
+                      <td class="md:px-5 px-3 md:py-6 py-3">
+                        <a
+                          href="./dashboard-team-details.html"
+                          class="flex items-start"
+                        >
+                          <div
+                            class="uppercase bc-teal-100 teal-600 text-xs p-2.5 font-semibold mr-2 rounded-full inline-flex items-center justify-center"
+                          >
+                            JS
+                          </div>
+                          <div>
+                            <div class="text-sm gray-700 font-medium">
+                              John Smith
+                            </div>
+                            <div class="text-xs gray-500">
+                              johnsmith@gmail.com
+                            </div>
+                          </div>
+                        </a>
+                      </td>
+                      <td class="md:px-5 px-3 md:py-6 py-3">
+                        <a href="./dashboard-team-details.html" class="block">
+                          12/01/2025</a
+                        >
+                      </td>
+                      <td class="md:px-5 px-3 md:py-6 py-3">
+                        <a
+                          class="px-2.5 py-1.5 text-sm font-semibold capitalize rounded-full violet_badge"
+                          href="./dashboard-team-details.html"
+                        >
+                          Remote</a
+                        >
+                      </td>
+                      <td class="md:px-5 px-3 md:py-6 py-3">
+                        <a
+                          class="px-2.5 py-1.5 text-sm font-semibold capitalize rounded-full active_badge"
+                          href="./dashboard-team-details.html"
+                        >
+                          Full Time</a
+                        >
+                      </td>
+                      <td
+                        class="md:px-5 px-3 md:py-6 py-3 text-base gray-800 font-bold capitalize"
+                      >
+                        <div class="flex items-center justify-between">
+                          <a href="./dashboard-team-details.html">
+                            <img
+                              src="../src/assets/eye.svg"
+                              alt="eye"
+                              class="min-w-5"
+                            />
+                          </a>
+
+                          <button type="button" name="trash" class="popup-open">
+                            <img
+                              src="../src/assets/trash.svg"
+                              alt="trash"
+                              class="min-w-5"
+                            />
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div id="popups" class="hidden">
+      <div class="popups">
+        <div id="trash" class="hidden popup-content text-center">
+          <div>
+            <img
+              src="../src/assets/exclamation-triangle.svg"
+              alt="exclamation-triangle"
+              class="mx-auto md:w-auto w-16"
+            />
+          </div>
+          <h6 class="md:text-2xl text-xl gray-700 font-semibold mb-3">
+            You’re about to delete this team member's profile
+          </h6>
+          <p class="gray-400">Are you sure you want to delete this profile?</p>
+          <div class="md:mt-9 mt-5">
+            <button
+              class="capitalize bc-emerald-700 md:py-3.5 py-2.5 px-4 rounded-md text-white md:w-3xs w-full md:inline-block block text-center md:mr-12 font-semibold hide_popup"
+            >
+              No, Don’t Delete Job
+            </button>
+            <button
+              class="capitalize bc-red-100 md:py-3.5 py-2.5 px-4 rounded-md red-800 md:w-3xs w-full md:inline-block block text-center md:mt-0 mt-3 font-semibold"
+            >
+              Yes, Delete Job
+            </button>
+          </div>
+        </div>
+        <div id="add-team-membered" class="hidden popup-content md:min-w-3xl">
+          <div class="md:pb-4 pb-2 flex items-center justify-between border-b">
+            <h2 class="text-lg gray-600 font-semibold">Add Team Member</h2>
+            <button type="button" class="hide_popup">
+              <img src="../src/assets/close.png" alt="" />
+            </button>
+          </div>
+          <form id="new-team-member" onsubmit="return validateForm()">
+            <div class="md:grid grid-cols-2 gap-4 md:mt-5 mt-3">
+              <div class="form-group mb-4">
+                <div class="mb-2.5">
+                  <label for="full_name" class="text-sm font-bold gray-800"
+                    >Full Name *</label
+                  >
+                </div>
+                <input
+                  type="text"
+                  class="form-control px-4 py-3.5 rounded-md border w-full"
+                  id="full_name"
+                  autocomplete="off"
+                  placeholder="Eg. John Doe"
+                />
+              </div>
+              <div class="form-group mb-4">
+                <div class="mb-2.5">
+                  <label for="email" class="text-sm font-bold gray-800"
+                    >Email Address *</label
+                  >
+                </div>
+                <input
+                  type="email"
+                  class="form-control px-4 py-3.5 rounded-md border w-full"
+                  id="email"
+                  onkeyup="validEmail(this)"
+                  autocomplete="off"
+                  placeholder="Eg. johndoe@email.com"
+                />
+              </div>
+              <div class="form-group mb-4">
+                <div class="mb-2.5">
+                  <label for="hired" class="text-sm font-bold gray-800"
+                    >Hired Date *</label
+                  >
+                </div>
+                <input
+                  type="date"
+                  class="form-control px-4 py-3.5 rounded-md border w-full"
+                  id="hired-date"
+                  autocomplete="off"
+                  placeholder="12/12/2025"
+                />
+              </div>
+              <div class="form-group mb-4">
+                <div class="mb-2.5">
+                  <label for="employee-id" class="text-sm font-bold gray-800"
+                    >Employee ID *</label
+                  >
+                </div>
+                <input
+                  type="text"
+                  class="form-control px-4 py-3.5 rounded-md border w-full"
+                  id="employee-id"
+                  autocomplete="off"
+                  placeholder="Employee ID"
+                />
+              </div>
+              <div class="form-group mb-4">
+                <label
+                  for="phone-number"
+                  class="mb-2.5 gray-800 font-semibold text-sm block"
+                  >Phone Number *</label
+                >
+                <div>
+                  <input
+                    type="tel"
+                    class="form-control px-4 py-3.5 rounded-md border w-full"
+                    id="phone-number"
+                    autocomplete="off"
+                    placeholder="Eg. 08012456789"
+                  />
+                </div>
+              </div>
+              <div class="form-group mb-4">
+                <label
+                  for="job-location"
+                  class="mb-2.5 gray-800 font-semibold text-sm block"
+                  >Job Location *</label
+                >
+                <div>
+                  <select
+                    id="job-location"
+                    class="form-control px-4 py-3.5 rounded-md border w-full"
+                  >
+                    <option value="" selected>eg. Remote</option>
+                    <option value="Remote">Remote</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group mb-4">
+                <label
+                  for="employment-type"
+                  class="mb-2.5 gray-800 font-semibold text-sm block"
+                  >Employment Type *</label
+                >
+                <div>
+                  <select
+                    id="employment-type"
+                    class="form-control px-4 py-3.5 rounded-md border w-full"
+                  >
+                    <option value="" selected>eg. Full time</option>
+                    <option value="Full time">Full time</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group mb-4">
+                <label
+                  class="mb-2.5 gray-800 font-semibold text-sm block"
+                  for="job-title"
+                  >Job Title *</label
+                >
+                <div class="">
+                  <input
+                    type="text"
+                    class="form-control px-4 py-3.5 rounded-md border w-full"
+                    id="job-title"
+                    autocomplete="off"
+                    placeholder="Social Media Brand Manager"
+                  />
+                </div>
+              </div>
+              <div class="form-group mb-4">
+                <label
+                  for="department-team"
+                  class="mb-2.5 gray-800 font-semibold text-sm block"
+                  >Department/Team *</label
+                >
+                <div class="">
+                  <select
+                    id="department-team"
+                    class="form-control px-4 py-3.5 rounded-md border w-full"
+                  >
+                    <option value="" selected>eg. Product</option>
+                    <option value="Product">Product</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group mb-4">
+                <label
+                  class="mb-2.5 gray-800 font-semibold text-sm block"
+                  for="salary-compensation"
+                  >Salary Compensation *</label
+                >
+                <div class="">
+                  <input
+                    type="text"
+                    class="form-control px-4 py-3.5 rounded-md border w-full"
+                    id="salary-compensation"
+                    autocomplete="off"
+                    placeholder="eg. $1K"
+                  />
+                </div>
+              </div>
+              <div class="form-group mb-4">
+                <div class="mb-2.5">
+                  <label for="linkedin-link" class="text-sm font-bold gray-800"
+                    >Linkedin Profile Link *</label
+                  >
+                </div>
+                <input
+                  type="url"
+                  class="form-control px-4 py-3.5 rounded-md border w-full"
+                  id="linkedin-link"
+                  autocomplete="off"
+                  placeholder="eg. https://linked.in/polyswap"
+                />
+              </div>
+              <div class="form-group mb-4">
+                <div class="mb-2.5">
+                  <label for="github-link" class="text-sm font-bold gray-800"
+                    >Github Profile Link (Optional)</label
+                  >
+                </div>
+                <input
+                  type="url"
+                  class="form-control px-4 py-3.5 rounded-md border w-full"
+                  id="github-link"
+                  autocomplete="off"
+                  placeholder="eg. github.com/johnsmith"
+                />
+              </div>
+              <div class="form-group mb-4">
+                <div class="mb-2.5">
+                  <label for="portfolio-link" class="text-sm font-bold gray-800"
+                    >Portfolio Link (Optional)</label
+                  >
+                </div>
+                <input
+                  type="url"
+                  class="form-control px-4 py-3.5 rounded-md border w-full"
+                  id="portfolio-link"
+                  autocomplete="off"
+                  placeholder="eg. johnsmith.com"
+                />
+              </div>
+              <div class="form-group mb-4">
+                <div class="mb-2.5">
+                  <label
+                    for="supervisor-manager"
+                    class="text-sm font-bold gray-800"
+                    >Select Supervisor/Manager *</label
+                  >
+                </div>
+                <select
+                  id="supervisor-manager"
+                  class="form-control px-4 py-3.5 rounded-md border w-full"
+                >
+                  <option value="" selected>eg. Adam Smith</option>
+                  <option value="Adam Smith">Adam Smith</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group mb-4">
+              <div class="mb-2.5">
+                <label for="upload-cv" class="text-sm font-bold gray-800"
+                  >Upload CV</label
+                >
+              </div>
+              <div class="file_upload_input w-full" id="upload-cv">
+                <input
+                  type="file"
+                  class="form-control px-4 py-3.5 rounded-md border"
+                  id="upload-cv-input"
+                  autocomplete="off"
+                  onchange="getUploadCV(this);"
+                  placeholder="eg. +1 234 567 890"
+                />
+                <div class="font-semibold text-center">
+                  <p id="upload-cv_uploaded_file"></p>
+                  <span class="gray-800"> Drop your files here or</span>
+                  <span class="blue-500">browse</span>
+                  <p class="gray-400 font-medium">Maximum size: 50MB</p>
+                </div>
+              </div>
+            </div>
+            <div class="sm:flex items-center justify-between">
+              <button
+                type="submit"
+                class="capitalize bc-emerald-700 md:py-3.5 py-2.5 px-4 rounded-md text-white md:w-3xs w-full md:inline-block block text-center md:mr-12 font-semibold sm:mb-0 mb-3"
+              >
+                Save Changes
+              </button>
+              <button
+                type="button"
+                class="capitalize bc-gray-100 md:py-3.5 py-2.5 px-4 rounded-lg gray-800 font-semibold md:w-3xs w-full hide_popup"
+              >
+                Cancel Operation
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="overlay"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../src/js/form-validation-team-member.js"></script>
+    <script src="../src/js/common.js"></script>
+    <script src="../src/js/index.js"></script>
+  </body>
+</html>

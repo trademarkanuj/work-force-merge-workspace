@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="../src/assets/WFM-Favicon.png" />
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link rel="stylesheet" href="../src/output.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="lg:flex items-start">
+        <div class="w-2xs left_sidebar lg:pt-10 pt-3 lg:pl-4 pl-4">
+          <div class="logo">
+            <a href="#"
+              ><img src="../src/assets/WFM-logo.svg" alt="WFM-logo "
+            /></a>
+          </div>
+          <div class="lg:hidden sidebar_toggle" id="sidebar_toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="lg:mt-13 left_sidebar_menu">
+            <li>
+              <a
+                href="./dashboard-overview.html"
+                class="bc-neutral-100 flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/overview.png"
+                  class="mr-2"
+                  alt="overview"
+                />
+                Overview</a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-jobs.html"
+                class="flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/briefcase.svg"
+                  class="mr-2"
+                  alt="briefcase"
+                />
+                Jobs</a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-approval-requests.html"
+                class="flex items-center justify-between py-3 pr-1 rounded-lg mb-4 sub_menu"
+                ><img
+                  src="../src/assets/sub-menu-img.svg"
+                  class=""
+                  alt="briefcase"
+                />
+                Approval Requests
+                <span
+                  class="bc-emerald-100 emerald-800 font-10 flex items-center justify-center font-semibold h-5 w-5 rounded-full"
+                  >5</span
+                ></a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-candidates.html"
+                class="flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/candidates.png"
+                  class="mr-2"
+                  alt="candidates"
+                />
+                Candidates</a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-team.html"
+                class="flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/people.png"
+                  class="mr-2"
+                  alt="people"
+                />
+                Team</a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-profile.html"
+                class="flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/profile.png"
+                  class="mr-2"
+                  alt="profile"
+                />
+                Profile</a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-settings.html"
+                class="flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/setting.png"
+                  class="mr-2"
+                  alt="setting"
+                />
+                Settings</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="lg:mt-18 md:mt-10 mt-5 lg:ml-14 w-full lg:pl-0 pl-4">
+          <h1 class="md:text-2xl text-xl gray-600 font-bold capitalize">
+            Hello Robert
+          </h1>
+          <div class="md:mt-6 mt-4 lg:flex items-start">
+            <div class="lg:w-2/3">
+              <div class="md:grid grid-cols-2 gap-4">
+                <div
+                  class="rounded-lg md:py-7 py-3 md:pl-5 pl-3 md:pr-2.5 pr-2 border-gray-200 sm:flex items-center justify-between md:mt-0 mt-3"
+                >
+                  <div>
+                    <div class="gray-500 md:mb-4 mb-2">Open Positions</div>
+                    <div class="font-semibold gray-700 md:text-2xl text-xl">
+                      6 Positions
+                    </div>
+                  </div>
+                  <div>
+                    <a
+                      href="./dashboard-jobs.html"
+                      class="capitalize font-15 flex items-center justify-center bc-gray-100 px-3 py-2.5 rounded-lg gray-800 font-semibold sm:mt-0 mt-2"
+                      >Manage Jobs
+                    </a>
+                  </div>
+                </div>
+                <div
+                  class="rounded-lg md:py-7 py-3 md:pl-5 pl-3 md:pr-2.5 pr-2 border-gray-200 sm:flex items-center justify-between md:mt-0 mt-3"
+                >
+                  <div>
+                    <div class="gray-500 md:mb-4 mb-2">Candidates</div>
+                    <div class="font-semibold gray-700 md:text-2xl text-xl">
+                      13 Candidates
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="rounded-lg md:py-7 py-3 md:pl-5 pl-3 md:pr-2.5 pr-2 border-gray-200 sm:flex items-center justify-between md:mt-0 mt-3"
+                >
+                  <div>
+                    <div class="gray-500 md:mb-4 mb-2">Team Members</div>
+                    <div class="font-semibold gray-700 md:text-2xl text-xl">
+                      3 Team Members
+                    </div>
+                  </div>
+                  <div>
+                    <a
+                      href="#"
+                      class="capitalize font-15 flex items-center justify-center bc-gray-100 px-3 py-2.5 rounded-lg gray-800 font-semibold sm:mt-0 mt-2"
+                      >View Team
+                    </a>
+                  </div>
+                </div>
+                <div
+                  class="rounded-lg md:py-7 py-3 md:pl-5 pl-3 md:pr-2.5 pr-2 border-gray-200 sm:flex items-center justify-between md:mt-0 mt-3"
+                >
+                  <div>
+                    <div class="gray-500 md:mb-4 mb-2">Scheduled Meetings</div>
+                    <div class="font-semibold gray-700 md:text-2xl text-xl">
+                      3 Meetings
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-6 rounded-lg md:p-4 p-3 border-gray-200">
+                <div class="flex items-center justify-between">
+                  <h2 class="text-lg gray-700 font-medium">New Applications</h2>
+                  <a
+                    href="./dashboard-candidates.html"
+                    class="capitalize font-15 flex items-center justify-center bc-gray-100 sm:px-3 px-2 py-2.5 rounded-lg gray-800 font-semibold sm:mt-0 mt-2"
+                    >view all
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      class="sm:ml-2 ml-1"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M0.875 7.00006C0.875 6.88403 0.921094 6.77275 1.00314 6.69071C1.08519 6.60866 1.19647 6.56256 1.3125 6.56256H11.6314L8.87775 3.80981C8.7956 3.72766 8.74945 3.61624 8.74945 3.50006C8.74945 3.38389 8.7956 3.27247 8.87775 3.19031C8.9599 3.10816 9.07132 3.06201 9.1875 3.06201C9.30368 3.06201 9.4151 3.10816 9.49725 3.19031L12.9972 6.69031C13.038 6.73095 13.0703 6.77923 13.0924 6.83239C13.1144 6.88554 13.1258 6.94252 13.1258 7.00006C13.1258 7.05761 13.1144 7.11459 13.0924 7.16774C13.0703 7.2209 13.038 7.26917 12.9972 7.30981L9.49725 10.8098C9.4151 10.892 9.30368 10.9381 9.1875 10.9381C9.07132 10.9381 8.9599 10.892 8.87775 10.8098C8.7956 10.7277 8.74945 10.6162 8.74945 10.5001C8.74945 10.3839 8.7956 10.2725 8.87775 10.1903L11.6314 7.43756H1.3125C1.19647 7.43756 1.08519 7.39147 1.00314 7.30942C0.921094 7.22738 0.875 7.1161 0.875 7.00006Z"
+                        fill="#1F2937"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <div class="mt-4" style="overflow-x: auto">
+                  <table class="w-full text-left table-none md:table-fixed">
+                    <thead
+                      class="uppercase font-semibold gray-400 text-xs bc-gray-50"
+                    >
+                      <th class="px-3.5 py-2.5">POSITION</th>
+                      <th class="px-3.5 py-2.5">NAME</th>
+                      <th class="px-3.5 py-2.5">APPLIED DATE</th>
+                      <th class="px-3.5 py-2.5">action</th>
+                    </thead>
+                    <tbody>
+                      <tr class="text-sm gray-700">
+                        <td class="md:px-5 px-2 md:py-6 py-3">
+                          Social Media Manager
+                        </td>
+                        <td class="md:px-5 px-2 md:py-6 py-3 font-medium">
+                          John Smith
+                        </td>
+
+                        <td class="md:px-5 px-2 md:py-6 py-3">24/01/25</td>
+                        <td
+                          class="md:px-3 px-2 md:py-6 py-3 text-base gray-800 font-bold capitalize"
+                        >
+                          <a
+                            href="./dashboard-candidate-details.html"
+                            class="font-15 py-2.5 block gray-500"
+                          >
+                            View Application</a
+                          >
+                        </td>
+                      </tr>
+                      <tr class="text-sm gray-700">
+                        <td class="md:px-5 px-2 md:py-6 py-3">
+                          Social Media Manager
+                        </td>
+                        <td class="md:px-5 px-2 md:py-6 py-3 font-medium">
+                          John Smith
+                        </td>
+
+                        <td class="md:px-5 px-2 md:py-6 py-3">24/01/25</td>
+                        <td
+                          class="md:px-3 px-2 md:py-6 py-3 text-base gray-800 font-bold capitalize"
+                        >
+                          <a
+                            href="./dashboard-candidate-details.html"
+                            class="font-15 py-2.5 block gray-500"
+                          >
+                            View Application</a
+                          >
+                        </td>
+                      </tr>
+                      <tr class="text-sm gray-700">
+                        <td class="md:px-5 px-2 md:py-6 py-3">
+                          Social Media Manager
+                        </td>
+                        <td class="md:px-5 px-2 md:py-6 py-3 font-medium">
+                          John Smith
+                        </td>
+
+                        <td class="md:px-5 px-2 md:py-6 py-3">24/01/25</td>
+                        <td
+                          class="md:px-3 px-2 md:py-6 py-3 text-base gray-800 font-bold capitalize"
+                        >
+                          <a
+                            href="./dashboard-candidate-details.html"
+                            class="font-15 py-2.5 block gray-500"
+                          >
+                            View Application</a
+                          >
+                        </td>
+                      </tr>
+                      <tr class="text-sm gray-700">
+                        <td class="md:px-5 px-2 md:py-6 py-3">
+                          Social Media Manager
+                        </td>
+                        <td class="md:px-5 px-2 md:py-6 py-3 font-medium">
+                          John Smith
+                        </td>
+
+                        <td class="md:px-5 px-2 md:py-6 py-3">24/01/25</td>
+                        <td
+                          class="md:px-3 px-2 md:py-6 py-3 text-base gray-800 font-bold capitalize"
+                        >
+                          <a
+                            href="./dashboard-candidate-details.html"
+                            class="font-15 py-2.5 block gray-500"
+                          >
+                            View Application</a
+                          >
+                        </td>
+                      </tr>
+                      <tr class="text-sm gray-700">
+                        <td class="md:px-5 px-2 md:py-6 py-3">
+                          Social Media Manager
+                        </td>
+                        <td class="md:px-5 px-2 md:py-6 py-3 font-medium">
+                          John Smith
+                        </td>
+
+                        <td class="md:px-5 px-2 md:py-6 py-3">24/01/25</td>
+                        <td
+                          class="md:px-3 px-2 md:py-6 py-3 text-base gray-800 font-bold capitalize"
+                        >
+                          <a
+                            href="./dashboard-candidate-details.html"
+                            class="font-15 py-2.5 block gray-500"
+                          >
+                            View Application</a
+                          >
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div
+              class="lg:w-1/3 rounded-lg p-5 border-gray-200 lg:ml-5 lg:mt-0 mt-5"
+            >
+              <h6 class="text-xl font-semibold gray-700 capitalize">
+                My Schedule
+              </h6>
+              <div class="md:mt-10 mt-5">
+                <h6 class="font-semibold gray-700 sm:mb-6 mb-3">
+                  Wednesday, 16th February
+                </h6>
+                <ul class="md:mb-10 mb-5">
+                  <li class="mb-2">
+                    <button
+                      name="my-interview"
+                      class="flex justify-between content-stretch text-left w-full popup-open"
+                    >
+                      <div class="flex content-stretch">
+                        <div
+                          class="flex items-center border-r-1 md:pr-3 pr-3 mr-3"
+                        >
+                          <time
+                            class="gray-700 md:text-2xl text-lg font-semibold"
+                            datetime="9:30"
+                            >9:30</time
+                          >
+                        </div>
+                        <div>
+                          <p class="gray-500 mb-1">Social Media Manager</p>
+                          <p class="gray-700 font-bold">Screening Call</p>
+                        </div>
+                      </div>
+                      <div>
+                        <img src="../src/assets/dots.svg" alt="" />
+                      </div>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="md:mt-10 mt-5">
+                <h6 class="font-semibold gray-700 sm:mb-6 mb-3">
+                  Friday, 16th February
+                </h6>
+                <ul class="md:mb-10 mb-5">
+                  <li class="mb-6">
+                    <button
+                      name="my-interview"
+                      class="flex justify-between content-stretch text-left w-full popup-open"
+                    >
+                      <div class="flex content-stretch">
+                        <div
+                          class="flex items-center border-r-1 md:pr-3 pr-3 mr-3"
+                        >
+                          <time
+                            class="gray-700 md:text-2xl text-lg font-semibold"
+                            datetime="9:30"
+                            >3:30</time
+                          >
+                        </div>
+                        <div>
+                          <p class="gray-500 mb-1">Frontend Developer</p>
+                          <p class="gray-700 font-bold">Screening Call</p>
+                        </div>
+                      </div>
+                      <div>
+                        <img src="../src/assets/dots.svg" alt="" />
+                      </div>
+                    </button>
+                  </li>
+                  <li class="mb-6">
+                    <button
+                      name="my-interview"
+                      class="flex justify-between content-stretch text-left w-full popup-open"
+                    >
+                      <div class="flex content-stretch">
+                        <div
+                          class="flex items-center border-r-1 md:pr-3 pr-3 mr-3"
+                        >
+                          <time
+                            class="gray-700 md:text-2xl text-lg font-semibold"
+                            datetime="9:30"
+                            >4:30</time
+                          >
+                        </div>
+                        <div>
+                          <p class="gray-500 mb-1">Frontend Developer</p>
+                          <p class="gray-700 font-bold">Technical Interview</p>
+                        </div>
+                      </div>
+                      <div>
+                        <img src="../src/assets/dots.svg" alt="" />
+                      </div>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="md:mt-10 mt-5">
+                <h6 class="font-semibold gray-700 sm:mb-6 mb-3">
+                  Monday, 19th February
+                </h6>
+                <ul class="md:mb-10 mb-5">
+                  <li class="mb-6">
+                    <button
+                      name="my-interview"
+                      class="flex justify-between content-stretch text-left w-full popup-open"
+                    >
+                      <div class="flex content-stretch">
+                        <div
+                          class="flex items-center border-r-1 md:pr-3 pr-3 mr-3"
+                        >
+                          <time
+                            class="gray-700 md:text-2xl text-lg font-semibold"
+                            datetime="9:00"
+                            >9:00</time
+                          >
+                        </div>
+                        <div>
+                          <p class="gray-500 mb-1">Backend Developer</p>
+                          <p class="gray-700 font-bold">Culture Placement</p>
+                        </div>
+                      </div>
+                      <div>
+                        <img src="../src/assets/dots.svg" alt="" />
+                      </div>
+                    </button>
+                  </li>
+                  <li class="mb-6">
+                    <button
+                      name="my-interview"
+                      class="flex justify-between content-stretch text-left w-full popup-open"
+                    >
+                      <div class="flex content-stretch">
+                        <div
+                          class="flex items-center border-r-1 md:pr-3 pr-3 mr-3"
+                        >
+                          <time
+                            class="gray-700 md:text-2xl text-lg font-semibold"
+                            datetime="4:30"
+                            >4:30</time
+                          >
+                        </div>
+                        <div>
+                          <p class="gray-500 mb-1">UI/UX Designer</p>
+                          <p class="gray-700 font-bold">Screening Call</p>
+                        </div>
+                      </div>
+                      <div>
+                        <img src="../src/assets/dots.svg" alt="" />
+                      </div>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div id="popups" class="hidden">
+      <div class="popups">
+        <div id="my-interview" class="hidden popup-content">
+          <div class="md:pb-4 pb-2 flex items-center justify-between border-b">
+            <h2 class="text-lg gray-600 font-semibold">Interview Details</h2>
+            <button type="button" class="hide_popup">
+              <img src="../src/assets/close.png" alt="" />
+            </button>
+          </div>
+          <ul>
+            <li class="flex justify-between items-center py-4.5 px-4 border-b">
+              <div class="flex text-sm gray-500">
+                <img
+                  src="../src/assets/briefcase.svg"
+                  class="mr-3"
+                  alt="briefcase"
+                />
+                Role
+              </div>
+              <div class="text-sm gray-700 font-semibold">
+                Social Media Brand Manager
+              </div>
+            </li>
+            <li class="flex justify-between items-center py-4.5 px-4 border-b">
+              <div class="flex items-center text-sm gray-500">
+                <img
+                  src="../src/assets/user.svg"
+                  class="mr-3"
+                  alt="briefcase"
+                />
+                Talent
+              </div>
+              <div class="text-sm gray-700 font-semibold">Jane Doe</div>
+            </li>
+            <li class="flex justify-between items-center py-4.5 px-4 border-b">
+              <div class="flex items-center text-sm gray-500">
+                <img
+                  src="../src/assets/user.svg"
+                  class="mr-3"
+                  alt="briefcase"
+                />
+                Talent
+              </div>
+              <div class="text-sm gray-700 font-semibold">Jane Doe</div>
+            </li>
+            <li class="flex items-center justify-between py-4.5 px-4 border-b">
+              <div class="flex items-center text-sm gray-500">
+                <div class="mr-3">
+                  <img
+                    src="../src/assets/document-transparent.svg"
+                    alt="document-transparent"
+                  />
+                </div>
+                <div class="text-sm gra7-700 font-medium">CV</div>
+              </div>
+              <div>
+                <a
+                  href="#"
+                  class="block capitalize px-4 py-3 bc-emerald-100 emerald-700 rounded-md"
+                >
+                  View Doc
+                </a>
+              </div>
+            </li>
+            <li class="flex items-center justify-between py-4.5 px-4 border-b">
+              <div class="flex items-center text-sm gray-500">
+                <div class="mr-3">
+                  <img src="../src/assets/linkedin.png" alt="linkedin" />
+                </div>
+                <div class="text-sm gra7-700 font-medium">LinkedIn Profile</div>
+              </div>
+              <div>
+                <!-- <a href="#" class="block">
+                  <img src="../src/assets/export.png" alt="export" />
+                </a> -->
+                <span
+                  class="px-2 py-1.5 text-xs font-semibold capitalize rounded-full in_progress_badge"
+                  >Not Submitted or NA</span
+                >
+              </div>
+            </li>
+            <li class="flex items-center justify-between py-4.5 px-4 border-b">
+              <div class="flex items-center text-sm gray-500">
+                <div class="mr-3">
+                  <img src="../src/assets/timer.svg" alt="timer" />
+                </div>
+                <div class="text-sm gra7-700 font-medium">Time</div>
+              </div>
+              <div>
+                <time datetime="3:30" class="gray-700 text-sm font-semibold"
+                  >3:30</time
+                >
+              </div>
+            </li>
+            <li class="flex items-center justify-between py-4.5 px-4 border-b">
+              <div class="flex items-center text-sm gray-500">
+                <div class="mr-3">
+                  <img src="../src/assets/element.svg" alt="element" />
+                </div>
+                <div class="text-sm gra7-700 font-medium">Type</div>
+              </div>
+              <div>
+                <time datetime="3:30" class="gray-700 text-sm font-semibold"
+                  >Screening Call</time
+                >
+              </div>
+            </li>
+            <li class="flex items-center justify-between py-4.5 px-4 border-b">
+              <div class="flex items-center text-sm gray-500">
+                <div class="mr-3">
+                  <img src="../src/assets/link.svg" alt="link" />
+                </div>
+                <div>
+                  <div class="text-sm gra7-700 font-medium">Meeting Link</div>
+                  <div class="text-sm gra7-700 font-medium overflow-ellipsis">
+                    https://zoom.com/208jd3sa...
+                  </div>
+                </div>
+              </div>
+              <div>
+                <button
+                  type="button"
+                  class="capitalize px-4 py-3 font-15 font-semibold bc-gray-50 gray-500"
+                >
+                  edit link
+                </button>
+              </div>
+            </li>
+          </ul>
+          <div class="md:mt-9 mt-5 flex items-center justify-between">
+            <button
+              type="button"
+              name="schedule_interview"
+              class="capitalize px-4 py-3 font-15 font-semibold bc-gray-50 gray-500 md:inline-block block text-center schedule_interview_popup"
+            >
+              Reschedule
+            </button>
+            <button
+              class="capitalize px-4 py-3 font-15 font-semibold bc-emerald-100 emerald-800 rounded-md"
+            >
+              Go to Meeting
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="overlay"></div>
+    </div>
+    <div id="schedule_interview" class="schedule_interview">
+      <div class="schedule_interview_content">
+        <div class="md:pb-4 pb-2 flex items-center justify-between border-b">
+          <h2 class="text-lg gray-600 font-semibold">Schedule Interview</h2>
+          <button type="button" class="hide_schedule_interview">
+            <img src="../src/assets/close.png" alt="" />
+          </button>
+        </div>
+        <div
+          class="sm:flex items-center justify-between md:mt-5 mt-3 border-b md:pb-5 pb-3 md:mb-8 mb-5"
+        >
+          <div class="flex items-start">
+            <div
+              class="uppercase bc-teal-100 teal-600 md:text-2xl text-xl md:p-3.5 p-2.5 font-semibold md:mr-4 mr-2 rounded-full inline-flex items-center justify-center"
+            >
+              JS
+            </div>
+            <div>
+              <div class="gray-500 font-medium mb-1">John Smith</div>
+              <div class="gray-500">Social Media Brand Manager</div>
+            </div>
+          </div>
+          <div class="sm:mt-0 mt-3 sm:ml-0 ml-14">
+            <div class="gray-500">Applied</div>
+            <div class="gray-500 font-semibold">12/01/2025</div>
+          </div>
+        </div>
+        <div class="form-group mb-4">
+          <div class="mb-2.5">
+            <label for="type-interview" class="text-sm font-bold gray-800"
+              >Type of Interview</label
+            >
+          </div>
+          <select
+            id="type-interview"
+            class="form-control px-4 py-3.5 rounded-md border w-full"
+          >
+            <option value="" selected="">Technical Interview</option>
+            <option value="Technical Interview">Technical Interview</option>
+          </select>
+        </div>
+        <div class="form-group mb-4">
+          <div class="mb-2.5">
+            <label for="interview-date" class="text-sm font-bold gray-800"
+              >Select Interview Date</label
+            >
+          </div>
+          <input
+            type="date"
+            id="interview-date"
+            name="interview-date"
+            class="form-control px-4 py-3.5 rounded-md border w-full"
+          />
+        </div>
+        <div class="form-group mb-4">
+          <div class="mb-2.5">
+            <label for="interview-time" class="text-sm font-bold gray-800"
+              >Select Interview Time</label
+            >
+          </div>
+          <select
+            id="interview-time"
+            class="form-control px-4 py-3.5 rounded-md border w-full"
+          >
+            <option value="" selected="">08:00 Am</option>
+            <option value="08:00 Am">08:00 Am</option>
+          </select>
+        </div>
+        <div class="form-group mb-4">
+          <div class="mb-2.5">
+            <label for="meeting-link" class="text-sm font-bold gray-800"
+              >Meeting Link</label
+            >
+          </div>
+          <input
+            type="url"
+            id="meeting-link"
+            class="form-control px-4 py-3.5 rounded-md border w-full"
+          />
+        </div>
+        <div class="px-4 py-3 bc-emerald-100 flex items-start">
+          <div class="mr-4">
+            <img
+              src="../src/assets/sms-green.svg"
+              class="w-6"
+              alt="sms-green"
+            />
+            <span></span>
+          </div>
+          <div class="emerald-800">
+            <div class="text-lg font-semibold mb-1">Technical Interview</div>
+            <div class="">
+              Scheduled for
+              <time datetime="" class="font-semibold"> 27th Jan, 08:00AM</time>
+            </div>
+          </div>
+        </div>
+        <div class="md:mt-9 mt-5 sm:flex items-center justify-between">
+          <button
+            class="capitalize bc-emerald-700 md:py-3.5 py-2.5 px-4 rounded-md text-white md:w-auto w-full md:inline-block block text-center md:mr-5 sm:mr-2 sm:mb-0 mb-2 font-semibold"
+          >
+            Send Schedule to Talent
+          </button>
+          <button
+            class="capitalize bc-gray-100 md:py-3.5 py-2.5 px-4 rounded-md gray-800 md:w-auto w-full md:inline-block block text-center md:mt-0 mt-3 font-semibold hide_schedule_interview"
+          >
+            Cancel Operation
+          </button>
+        </div>
+      </div>
+      <div class="overlay"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="../src/js/index.js"></script>
+    <script src="../src/js/common.js"></script>
+  </body>
+</html>

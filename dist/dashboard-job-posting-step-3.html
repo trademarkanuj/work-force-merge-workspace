@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="../src/assets/WFM-Favicon.png" />
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link rel="stylesheet" href="../src/output.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="lg:flex items-start mb-10">
+        <div class="w-2xs left_sidebar lg:pt-10 pt-3 lg:pl-4 pl-4">
+          <div class="logo">
+            <a href="#"
+              ><img src="../src/assets/WFM-logo.svg" alt="WFM-logo "
+            /></a>
+          </div>
+          <div class="lg:hidden sidebar_toggle" id="sidebar_toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="lg:mt-13 left_sidebar_menu">
+            <li>
+              <a
+                href="./dashboard-overview.html"
+                class="flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/overview.png"
+                  class="mr-2"
+                  alt="overview"
+                />
+                Overview</a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-jobs.html"
+                class="bc-neutral-100 flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/briefcase.svg"
+                  class="mr-2"
+                  alt="briefcase"
+                />
+                Jobs</a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-approval-requests.html"
+                class="flex items-center justify-between py-3 pr-1 rounded-lg mb-4 sub_menu"
+                ><img
+                  src="../src/assets/sub-menu-img.svg"
+                  class=""
+                  alt="briefcase"
+                />
+                Approval Requests
+                <span
+                  class="bc-emerald-100 emerald-800 font-10 flex items-center justify-center font-semibold h-5 w-5 rounded-full"
+                  >5</span
+                ></a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-candidates.html"
+                class="flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/candidates.png"
+                  class="mr-2"
+                  alt="candidates"
+                />
+                Candidates</a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-team.html"
+                class="flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/people.png"
+                  class="mr-2"
+                  alt="people"
+                />
+                Team</a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-profile.html"
+                class="flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/profile.png"
+                  class="mr-2"
+                  alt="profile"
+                />
+                Profile</a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-settings.html"
+                class="flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/setting.png"
+                  class="mr-2"
+                  alt="setting"
+                />
+                Settings</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="lg:mt-12 md:mt-8 mt-5 lg:ml-14 lg:pl-0 md:pl-4 w-full">
+          <div class="flex items-center lg:pl-3">
+            <div class="lg:mr-5 mr-3">
+              <a href="./dashboard-job-posting-step-1.html">
+                <img
+                  src="../src/assets/chevron-left-lg.svg"
+                  alt=""
+                  class="lg:w-auto w-6"
+                />
+              </a>
+            </div>
+            <div>
+              <p class="gray-600 font-bold lg:text-2xl text-xl">
+                Add Job Posting
+              </p>
+              <ul class="gray-600 flex items-center">
+                <li>Jobs</li>
+                <li class="mx-2">></li>
+                <li class="capitalize">add job posting</li>
+              </ul>
+            </div>
+          </div>
+          <div class="lg:px-10 md:px-5">
+            <div
+              class="flex flex-wrap items-center justify-center md:mt-15 mt-5 all_steps_box"
+            >
+              <div class="flex items-center all_steps_count active">
+                <div class="current_step"></div>
+                <div class="md:mx-5 mx-2">
+                  <div class="font-semibold steps_name">Details</div>
+                  <div class="text-sm steps_number">Step 1</div>
+                </div>
+                <div class="gray-500">
+                  <img
+                    src="../src/assets/chevron-right.svg"
+                    alt="chevron-right"
+                  />
+                </div>
+              </div>
+              <div
+                id="step_two_completed"
+                class="flex items-center all_steps_count active"
+              >
+              <div class="current_step"></div>
+                <div class="md:mx-5 mx-2">
+                  <div class="font-semibold steps_name">Add Q&As</div>
+                  <div class="text-sm steps_number">Step 2</div>
+                </div>
+                <div class="gray-500">
+                  <img
+                    src="../src/assets/chevron-right.svg"
+                    alt="chevron-right"
+                  />
+                </div>
+              </div>
+              <div class="flex items-center all_steps_count active">
+                <div class="current_step"></div>
+                <div class="md:mx-5 mx-2">
+                  <div class="font-semibold steps_name">
+                    Preview Application
+                  </div>
+                  <div class="text-sm steps_number">Step 3</div>
+                </div>
+              </div>
+            </div>
+            <div class="md:mt-6 mt-4">
+              <h6 class="text-lg font-medium gray-800">Preview Job Posting</h6>
+              <p class="text-sm gray-500">Crosscheck the details provided.</p>
+            </div>
+            <div class="mt-4 bc-green-50 lg:px-14 md:px-8 px-3 rounded-xl md:py-10 py-3">
+              <h1 class="gray-700 font-medium md:text-4xl text-2xl">
+                Social Media Brand Manager
+              </h1>
+              <div class="md:grid grid-cols-3 gap-4 md:mt-10 mt-5">
+                <div class="flex items-center lg:mb-12 md:mb-8 mb-4">
+                  <div
+                    class="p-2.5 rounded-full flex items-center justify-center bc-lime-50 md:mr-6 mr-3"
+                  >
+                    <img src="../src/assets/location-green.svg" alt="" />
+                  </div>
+                  <div>
+                    <div class="uppercase gray-400 font-semibold text-xs mb-2">
+                      LOCATION
+                    </div>
+                    <div class="capitalize gray-800 font-medium">Remote</div>
+                  </div>
+                </div>
+                <div class="flex items-center lg:mb-12 md:mb-8 mb-4">
+                  <div
+                    class="p-2.5 rounded-full flex items-center justify-center bc-blue-50 md:mr-6 mr-3"
+                  >
+                    <img src="../src/assets/grid-blue.svg" alt="" />
+                  </div>
+                  <div>
+                    <div class="uppercase gray-400 font-semibold text-xs mb-2">
+                      DEPARTMENT
+                    </div>
+                    <div class="capitalize gray-800 font-medium">
+                      Sales and Marketing
+                    </div>
+                  </div>
+                </div>
+                <div class="flex items-center lg:mb-12 md:mb-8 mb-4">
+                  <div
+                    class="p-2.5 rounded-full flex items-center justify-center bc-violet-50 md:mr-6 mr-3"
+                  >
+                    <img src="../src/assets/moneys-blue.svg" alt="" />
+                  </div>
+                  <div>
+                    <div class="uppercase gray-400 font-semibold text-xs mb-2">
+                      SALARY RANGE
+                    </div>
+                    <div class="capitalize gray-800 font-medium">$3K - $5K</div>
+                  </div>
+                </div>
+                <div class="flex items-center lg:mb-12 md:mb-8 mb-4">
+                  <div
+                    class="p-2.5 rounded-full flex items-center justify-center bc-fuchsia-50 md:mr-6 mr-3"
+                  >
+                    <img src="../src/assets/briefcase-blue.svg" alt="" />
+                  </div>
+                  <div>
+                    <div class="uppercase gray-400 font-semibold text-xs mb-2">
+                      EMPLOYMENT TYPE
+                    </div>
+                    <div class="capitalize gray-800 font-medium">Contract</div>
+                  </div>
+                </div>
+                <div class="flex items-center lg:mb-12 md:mb-8 mb-4">
+                  <div
+                    class="p-2.5 rounded-full flex items-center justify-center bc-yellow-50 md:mr-6 mr-3"
+                  >
+                    <img src="../src/assets/profile-user-yellow.svg" alt="" />
+                  </div>
+                  <div>
+                    <div class="uppercase gray-400 font-semibold text-xs mb-2">
+                      APPLICATIONS RECEIVED
+                    </div>
+                    <div class="capitalize gray-800 font-medium">74</div>
+                  </div>
+                </div>
+                <div class="flex items-center lg:mb-12 md:mb-8 mb-4">
+                  <div
+                    class="p-2.5 rounded-full flex items-center justify-center bc-red-50 md:mr-6 mr-3"
+                  >
+                    <img src="../src/assets/calendar-red.svg" alt="" />
+                  </div>
+                  <div>
+                    <div class="uppercase gray-400 font-semibold text-xs mb-2">
+                      CLOSING DATE
+                    </div>
+                    <div class="capitalize gray-800 font-medium">
+                      31 June, 2025
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="">
+                  <h6 class="font-bold mb-6">About PolySwarm</h6>
+                  <p>
+                    PolySwarm is a cutting-edge cybersecurity company
+                    revolutionizing threat detection through its decentralized
+                    marketplace powered by blockchain technology. We empower
+                    organizations to access the most effective threat detection
+                    tools and insights from across the globe. Join our team and
+                    help shape the future of cybersecurity.
+                  </p>
+                </div>
+                <div class="mt-6">
+                  <h6 class="font-bold mb-6">Role Overview</h6>
+                  <p>
+                    PolySwarm is seeking a creative and data-driven Social Media
+                    Brand Manager to elevate our online presence and engage our
+                    crypto-savvy audience. You will be responsible for
+                    developing and executing social media strategies that
+                    amplify the PolySwarm brand, build community trust, and
+                    drive engagement across multiple platforms.
+                  </p>
+                </div>
+                <div class="mt-6">
+                  <h6 class="font-bold mb-2">Key Responsibilities:</h6>
+                  <ul class="list-disc list-inside md:pl-4">
+                    <li>
+                      Develop and implement a results-driven social media
+                      strategy tailored to the crypto and cybersecurity space.
+                    </li>
+                    <li>
+                      Manage and create engaging content for platforms such as
+                      Twitter, LinkedIn, Instagram, Telegram, and Discord.
+                    </li>
+                    <li>
+                      Monitor social media trends, conversations, and emerging
+                      platforms to identify new opportunities for engagement.
+                    </li>
+                    <li>
+                      Foster and grow an active community by responding to
+                      comments, DMs, and engaging in crypto-related discussions.
+                    </li>
+                    <li>
+                      Collaborate with internal teams to align social media
+                      campaigns with marketing and brand goals.
+                    </li>
+                    <li>
+                      Analyze performance metrics and provide insights to
+                      optimize social media campaigns and content.
+                    </li>
+                    <li>
+                      Stay informed on crypto and blockchain industry
+                      developments to ensure relevant and timely messaging.
+                    </li>
+                  </ul>
+                </div>
+                <div class="mt-6">
+                  <h6 class="font-bold mb-2">Qualifications:</h6>
+                  <ul class="list-disc list-inside md:pl-4">
+                    <li>
+                      Proven experience as a Social Media Manager, preferably in
+                      the crypto, blockchain, or tech industry.
+                    </li>
+                    <li>
+                      Strong understanding of the crypto and cybersecurity
+                      ecosystems, with a passion for blockchain technology.
+                    </li>
+                    <li>
+                      Excellent written and verbal communication skills, with a
+                      knack for crafting compelling narratives.
+                    </li>
+                    <li>
+                      Proficiency in using social media management tools (e.g.,
+                      Hootsuite, Buffer) and analytics platforms.
+                    </li>
+                    <li>
+                      Ability to think creatively and strategically, balancing
+                      brand consistency with innovative ideas.
+                    </li>
+                    <li>
+                      Experience building and nurturing online communities on
+                      Telegram, Discord, or similar platforms.
+                    </li>
+                    <li>
+                      Basic knowledge of graphic design tools (e.g., Canva,
+                      Adobe Spark) is a plus.
+                    </li>
+                  </ul>
+                </div>
+                <div class="mt-6">
+                  <h6 class="font-bold mb-2">Why Join PolySwarm?</h6>
+                  <ul class="list-disc list-inside md:pl-4">
+                    <li>
+                      Be part of an innovative company at the forefront of
+                      cybersecurity and blockchain technology.
+                    </li>
+                    <li>
+                      Work with a passionate, collaborative, and remote-first
+                      global team.
+                    </li>
+                    <li>
+                      Opportunity to shape a growing brand in an exciting,
+                      fast-paced industry.
+                    </li>
+                    <li>Competitive compensation and benefits.</li>
+                  </ul>
+                </div>
+                <div class="mt-6 gray-700">
+                  <p>
+                    If you're a social media expert with a passion for crypto
+                    and storytelling, we'd love to hear from you!
+                  </p>
+                </div>
+                <div class="mt-6">
+                  <h6 class="font-bold mb-2">Talent Questions</h6>
+                  <ul class="list-disc list-inside md:pl-4">
+                    <li
+                      class="flex items-center justify-between border-b md:px-4 px-2 md:py-4.5 py-2.5"
+                    >
+                      <span> How many years of experience do you have</span>
+                      <span class="bc-gray-100 gray-500 px-1 py-2.5 text-xs"
+                        >Range</span
+                      >
+                    </li>
+                    <li
+                      class="flex items-center justify-between border-b md:px-4 px-2 md:py-4.5 py-2.5"
+                    >
+                      <span> Have you worked in this role before?</span>
+                      <span class="bc-gray-100 gray-500 px-1 py-2.5 text-xs"
+                        >Yes / No</span
+                      >
+                    </li>
+                    <li
+                      class="flex items-center justify-between border-b md:px-4 px-2 md:py-4.5 py-2.5"
+                    >
+                      <span>
+                        Starting from when would you be available and what is
+                        your notice period?</span
+                      >
+                      <span class="bc-gray-100 gray-500 px-1 py-2.5 text-xs"
+                        >Text Field</span
+                      >
+                    </li>
+                    <li
+                      class="flex items-center justify-between border-b md:px-4 px-2 md:py-4.5 py-2.5"
+                    >
+                      <span>
+                        Can you please tell me more about the responsibilities
+                        in your current role?</span
+                      >
+                      <span class="bc-gray-100 gray-500 px-1 py-2.5 text-xs"
+                        >Text Field</span
+                      >
+                    </li>
+                    <li
+                      class="flex items-center justify-between border-b md:px-4 px-2 md:py-4.5 py-2.5"
+                    >
+                      <span>
+                        What type of contract are you looking for ideally?</span
+                      >
+                      <span class="bc-gray-100 gray-500 px-1 py-2.5 text-xs"
+                        >Multiple choice</span
+                      >
+                    </li>
+                    <li
+                      class="flex items-center justify-between border-b md:px-4 px-2 md:py-4.5 py-2.5"
+                    >
+                      <span> Why are you looking for a new job?</span>
+                      <span class="bc-gray-100 gray-500 px-1 py-2.5 text-xs"
+                        >Text Field</span
+                      >
+                    </li>
+                    <li
+                      class="flex items-center justify-between border-b md:px-4 px-2 md:py-4.5 py-2.5"
+                    >
+                      <span> What makes you a good fit for this position</span>
+                      <span class="bc-gray-100 gray-500 px-1 py-2.5 text-xs"
+                        >Text Field</span
+                      >
+                    </li>
+                    <li
+                      class="flex items-center justify-between border-b md:px-4 px-2 md:py-4.5 py-2.5"
+                    >
+                      <span>
+                        Are you willing to travel at least 50% of the time for
+                        work?</span
+                      >
+                      <span class="bc-gray-100 gray-500 px-1 py-2.5 text-xs"
+                        >Yes / No</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-right lg:mt-8 md:mt-5 mt-4">
+              <a
+                href="./dashboard-jobs.html"
+                class="capitalize bc-emerald-800 text-white px-4 py-3.5 font-15 rounded-lg font-semibold md:mt-0 mt-3 sm:w-auto w-full"
+              >
+                Submit Job Posting
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="../src/js/index.js"></script>
+    <script src="../src/js/common.js"></script>
+  </body>
+</html>

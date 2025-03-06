@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="../src/assets/WFM-Favicon.png" />
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link rel="stylesheet" href="../src/output.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="lg:flex items-start">
+        <div class="w-2xs left_sidebar lg:pt-10 pt-3 lg:pl-4 pl-4">
+          <div class="logo">
+            <a href="#"
+              ><img src="../src/assets/WFM-logo.svg" alt="WFM-logo "
+            /></a>
+          </div>
+          <div class="lg:hidden sidebar_toggle" id="sidebar_toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="lg:mt-13 left_sidebar_menu">
+            <li>
+              <a
+                href="./dashboard-overview.html"
+                class="flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/overview.png"
+                  class="mr-2"
+                  alt="overview"
+                />
+                Overview</a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-jobs.html"
+                class="bc-neutral-100 flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/briefcase.svg"
+                  class="mr-2"
+                  alt="briefcase"
+                />
+                Jobs</a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-approval-requests.html"
+                class="flex items-center justify-between py-3 pr-1 rounded-lg mb-4 sub_menu"
+                ><img
+                  src="../src/assets/sub-menu-img.svg"
+                  class=""
+                  alt="briefcase"
+                />
+                Approval Requests
+                <span
+                  class="bc-emerald-100 emerald-800 font-10 flex items-center justify-center font-semibold h-5 w-5 rounded-full"
+                  >5</span
+                ></a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-candidates.html"
+                class="flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/candidates.png"
+                  class="mr-2"
+                  alt="candidates"
+                />
+                Candidates</a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-team.html"
+                class="flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/people.png"
+                  class="mr-2"
+                  alt="people"
+                />
+                Team</a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-profile.html"
+                class="flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/profile.png"
+                  class="mr-2"
+                  alt="profile"
+                />
+                Profile</a
+              >
+            </li>
+            <li>
+              <a
+                href="./dashboard-settings.html"
+                class="flex items-center py-3 px-4 rounded-lg mb-4"
+                ><img
+                  src="../src/assets/setting.png"
+                  class="mr-2"
+                  alt="setting"
+                />
+                Settings</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="lg:mt-18 md:mt-10 mt-5 lg:ml-14 w-full lg:pl-0 pl-4">
+          <h1 class="md:text-2xl text-xl gray-600 font-bold capitalize">
+            Jobs
+          </h1>
+
+          <div class="mt-6">
+            <div class="bc-emerald-800 rounded-md p-4 mb-5 alert_badge">
+              <div class="flex items-start justify-between">
+                <div class="md:flex items-center">
+                  <div class="mr-5">
+                    <img
+                      src="../src/assets/static-icon.png"
+                      alt="static-icon"
+                      class="md:w-auto w-5"
+                    />
+                  </div>
+                  <div>
+                    <div
+                      class="md:text-lg font-semibold text-white mb-1 md:mt-0 mt-2"
+                    >
+                      Job submitted successfully!
+                    </div>
+                    <div class="emerald-200 text-white">
+                      The job posting will be made live once it has been
+                      approved by your HR admin officer.
+                    </div>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <span
+                    class="mt-2 mr-5 emerald-200 text-sm font-semibold md:block hidden"
+                    >Just Now</span
+                  >
+                  <img
+                    src="../src/assets/x.svg"
+                    class="md:w-6 md:h-6 w-10 h-10 cursor-pointer alert_badge_closed"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="md:grid grid-cols-2 gap-4">
+              <div class="rounded-lg md:p-6 p-3 border-gray-200 md:mt-0 mt-3">
+                <div class="gray-500 md:mb-4 mb-2">Open Positions</div>
+                <div class="font-semibold gray-700 md:text-2xl text-xl">
+                  6 Positions
+                </div>
+              </div>
+              <div class="rounded-lg md:p-6 p-3 border-gray-200 md:mt-0 mt-3">
+                <div class="gray-500 md:mb-4 mb-2">Candidates</div>
+                <div class="font-semibold gray-700 md:text-2xl text-xl">
+                  13 Candidates
+                </div>
+              </div>
+            </div>
+            <div class="py-4.5 md:flex items-center justify-between">
+              <div class="sm:flex items-center">
+                <div class="relative drop-down-popup">
+                  <button
+                    name="change-status"
+                    class="capitalize flex items-center sm:justify-between justify-center bc-gray-100 pl-6 pr-12 py-3.5 rounded-lg gray-800 font-semibold sm:w-auto w-full sm:mb-0 mb-3 open-dropdown"
+                  >
+                    <img
+                      src="../src/assets/filter-search.svg"
+                      class="mr-2.5"
+                      alt="filter-search"
+                    />
+                    filter
+                  </button>
+                  <div class="drop-down-popup-box">
+                    <div
+                      class="drop-down-popup-content drop-down-popup-content_left"
+                    >
+                      <div
+                        class="flex items-center justify-between py-5 border-b"
+                      >
+                        <div
+                          class="px-2.5 py-1.5 text-sm font-semibold capitalize rounded-full accepted_badge"
+                        >
+                          Hiring
+                        </div>
+                        <div>
+                          <input type="checkbox" name="hiring" id="hiring" />
+                        </div>
+                      </div>
+                      <div
+                        class="flex items-center justify-between py-5 border-b"
+                      >
+                        <div
+                          class="px-2.5 py-1.5 text-sm font-semibold capitalize rounded-full gray_badge"
+                        >
+                          Filled
+                        </div>
+                        <div>
+                          <input type="checkbox" name="Filled" id="Filled" />
+                        </div>
+                      </div>
+                      <div
+                        class="flex items-center justify-between py-5 border-b"
+                      >
+                        <div
+                          class="px-2.5 py-1.5 text-sm font-semibold capitalize rounded-full in_progress_badge"
+                        >
+                          Draft
+                        </div>
+                        <div>
+                          <input type="checkbox" name="draft" id="draft" />
+                        </div>
+                      </div>
+                      <div
+                        class="flex items-center justify-between py-5 border-b"
+                      >
+                        <div
+                          class="gray-700 px-2.5 py-1.5 text-xl font-semibold"
+                        >
+                          By creation date
+                        </div>
+                        <div>
+                          <input type="checkbox" name="draft" id="draft" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="overlay close-drop-down"></div>
+                  </div>
+                </div>
+                <div class="sm:ml-4 relative input_with_icon">
+                  <span class="input_icon"
+                    ><img src="../src/assets/search.svg" alt="search"
+                  /></span>
+                  <input
+                    type="text"
+                    class="form-control px-4 py-3.5 rounded-md border w-full"
+                    id="search"
+                    autocomplete="off"
+                    placeholder="Search"
+                  />
+                </div>
+              </div>
+              <a
+                href="./dashboard-job-posting-step-1.html"
+                class="capitalize flex items-center sm:justify-between justify-center bc-emerald-800 text-white px-10 py-2.5 rounded-lg font-semibold md:mt-0 mt-3 sm:w-auto w-full"
+              >
+                <span class="mr-2.5 text-xl">+</span> job posting
+              </a>
+            </div>
+            <div class="rounded-lg md:p-4 p-3 border-gray-200">
+              <div class="" style="overflow-x: auto">
+                <table class="w-full text-left">
+                  <thead
+                    class="uppercase font-semibold gray-400 text-xs bc-gray-50"
+                  >
+                    <th class="md:px-3.5 px-2.5 md:py-2.5 py-2">POSITION</th>
+                    <th class="md:px-3.5 px-2.5 md:py-2.5 py-2">CANDIDATES</th>
+                    <th class="md:px-3.5 px-2.5 md:py-2.5 py-2">LOCATION</th>
+                    <th class="md:px-3.5 px-2.5 md:py-2.5 py-2">
+                      CREATED DATE
+                    </th>
+                    <th class="md:px-3.5 px-2.5 md:py-2.5 py-2">status</th>
+                    <th class="md:px-3.5 px-2.5 md:py-2.5 py-2">action</th>
+                  </thead>
+                  <tbody>
+                    <tr class="text-sm gray-700">
+                      <td class="md:px-5 px-3 md:py-6 py-3 text-ellipsis">
+                        <a href="./dashboard-job-details.html" class="block">
+                          Social Media Manager</a
+                        >
+                      </td>
+                      <td class="md:px-5 px-3 md:py-6 py-3 font-medium">
+                        <a href="./dashboard-job-details.html" class="block">
+                          John Smith</a
+                        >
+                      </td>
+                      <td class="md:px-5 px-3 md:py-6 py-3">
+                        <a href="./dashboard-job-details.html" class="block">
+                          50</a
+                        >
+                      </td>
+                      <td class="md:px-5 px-3 md:py-6 py-3">
+                        <a href="./dashboard-job-details.html" class="block">
+                          Remote</a
+                        >
+                      </td>
+                      <td class="md:px-5 px-3 md:py-6 py-3">
+                        <a
+                          class="px-2.5 py-1.5 text-sm font-semibold capitalize rounded-full accepted_badge"
+                          href="./dashboard-job-details.html"
+                        >
+                          hiring</a
+                        >
+                      </td>
+                      <td
+                        class="md:px-5 px-3 md:py-6 py-3 text-base gray-800 font-bold capitalize"
+                      >
+                        <div class="flex items-center justify-between">
+                          <a href="./dashboard-job-details.html">
+                            <img
+                              src="../src/assets/eye.svg"
+                              alt="eye"
+                              class="min-w-5"
+                            />
+                          </a>
+                          <button
+                            class="md:mx-0 mx-2 popup-open"
+                            type="button"
+                            name="job_posting"
+                          >
+                            <img
+                              src="../src/assets/edit.svg"
+                              alt="edit"
+                              class="min-w-5"
+                            />
+                          </button>
+                          <button type="button" name="trash" class="popup-open">
+                            <img
+                              src="../src/assets/trash.svg"
+                              alt="trash"
+                              class="min-w-5"
+                            />
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="text-sm gray-700">
+                      <td class="md:px-5 px-3 md:py-6 py-3 text-ellipsis">
+                        <a href="./dashboard-job-details.html" class="block">
+                          Frontend Developer</a
+                        >
+                      </td>
+                      <td class="md:px-5 px-3 md:py-6 py-3 font-medium">
+                        <a href="./dashboard-job-details.html" class="block">
+                          John Smith</a
+                        >
+                      </td>
+                      <td class="md:px-5 px-3 md:py-6 py-3">
+                        <a href="./dashboard-job-details.html" class="block">
+                          50</a
+                        >
+                      </td>
+                      <td class="md:px-5 px-3 md:py-6 py-3">
+                        <a href="./dashboard-job-details.html" class="block">
+                          Remote</a
+                        >
+                      </td>
+                      <td class="md:px-5 px-3 md:py-6 py-3">
+                        <a
+                          class="px-2.5 py-1.5 text-sm font-semibold capitalize rounded-full gray_badge"
+                          href="./dashboard-job-details.html"
+                        >
+                          filled</a
+                        >
+                      </td>
+                      <td
+                        class="md:px-5 px-3 md:py-6 py-3 text-base gray-800 font-bold capitalize"
+                      >
+                        <div class="flex items-center justify-between">
+                          <a href="./dashboard-job-details.html">
+                            <img
+                              src="../src/assets/eye.svg"
+                              alt="eye"
+                              class="min-w-5"
+                            />
+                          </a>
+                          <button
+                            class="md:mx-0 mx-2 popup-open"
+                            type="button"
+                            name="job_posting"
+                          >
+                            <img
+                              src="../src/assets/edit.svg"
+                              alt="edit"
+                              class="min-w-5"
+                            />
+                          </button>
+                          <button type="button" name="trash" class="popup-open">
+                            <img
+                              src="../src/assets/trash.svg"
+                              alt="trash"
+                              class="min-w-5"
+                            />
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div id="popups" class="hidden">
+      <div class="popups">
+        <div id="trash" class="hidden popup-content text-center">
+          <div>
+            <img
+              src="../src/assets/exclamation-triangle.svg"
+              alt="exclamation-triangle"
+              class="mx-auto md:w-auto w-16"
+            />
+          </div>
+          <h6 class="md:text-2xl text-xl gray-700 font-semibold mb-3">
+            You’re about to delete this job posting
+          </h6>
+          <p class="gray-400">
+            This job posting will no longer be visible and you will loose all
+            data including applied candidates. Are you sure you want to delete?
+          </p>
+          <div class="md:mt-9 mt-5">
+            <button
+              class="capitalize bc-emerald-700 md:py-3.5 py-2.5 px-4 rounded-md text-white md:w-3xs w-full md:inline-block block text-center md:mr-12 font-semibold hide_popup"
+            >
+              No, Don’t Delete Job
+            </button>
+            <button
+              class="capitalize bc-red-100 md:py-3.5 py-2.5 px-4 rounded-md red-800 md:w-3xs w-full md:inline-block block text-center md:mt-0 mt-3 font-semibold"
+            >
+              Yes, Delete Job
+            </button>
+          </div>
+        </div>
+        <div id="job_posting" class="hidden popup-content lg:min-w-4xl">
+          <div class="md:pb-4 pb-2 flex items-center justify-between border-b">
+            <h2 class="text-lg gray-600 font-semibold">Add Job Posting</h2>
+            <button type="button" class="hide_popup">
+              <img src="../src/assets/close.png" alt="" />
+            </button>
+          </div>
+          <div
+            class="flex items-center justify-center md:my-6 my-4 all_steps_box"
+          >
+            <div
+              class="flex items-center all_steps_count step_one_active active"
+            >
+              <div
+                class="shadow text-sm font-semibold gray-800 border-gray-200 w-9 h-9 rounded-full flex items-center justify-center current_step"
+              >
+                1
+              </div>
+              <div class="mx-5">
+                <div class="font-semibold steps_name">Details</div>
+                <div class="text-sm steps_number">Step 1</div>
+              </div>
+              <div class="gray-500">
+                <img
+                  src="../src/assets/chevron-right.svg"
+                  alt="chevron-right"
+                />
+              </div>
+            </div>
+            <div
+              id="step_two_completed"
+              class="flex items-center all_steps_count"
+            >
+              <div
+                class="shadow text-sm font-semibold gray-800 border-gray-200 w-9 h-9 rounded-full flex items-center justify-center current_step"
+              >
+                2
+              </div>
+              <div class="mx-5">
+                <div class="font-semibold steps_name">Add Q&As</div>
+                <div class="text-sm steps_number">Step 2</div>
+              </div>
+              <div class="gray-500">
+                <img
+                  src="../src/assets/chevron-right.svg"
+                  alt="chevron-right"
+                />
+              </div>
+            </div>
+            <div class="flex items-center all_steps_count">
+              <div
+                class="shadow text-sm font-semibold gray-800 border-gray-200 w-9 h-9 rounded-full flex items-center justify-center current_step"
+              >
+                3
+              </div>
+              <div class="mx-5">
+                <div class="font-semibold steps_name">Preview Application</div>
+                <div class="text-sm steps_number">Step 3</div>
+              </div>
+            </div>
+          </div>
+          <div class="step_1" id="step_1">
+            <div class="lg:grid grid-cols-2 gap-4">
+              <div class="form-group md:mb-0 mb-3">
+                <label
+                  for="job-title"
+                  class="mb-2.5 gray-800 font-semibold text-sm block"
+                  >job-title</label
+                >
+                <div>
+                  <input
+                    type="text"
+                    class="form-control px-4 py-3.5 rounded-md border w-full"
+                    id="job-title"
+                    autocomplete="off"
+                    placeholder="eg. Frontend Developer"
+                  />
+                </div>
+              </div>
+              <div class="form-group md:mb-0 mb-3">
+                <label
+                  for="job-category"
+                  class="mb-2.5 gray-800 font-semibold text-sm block"
+                  >Job Category</label
+                >
+                <div>
+                  <select
+                    id="job-category"
+                    class="form-control px-4 py-3.5 rounded-md border w-full"
+                  >
+                    <option value="" selected="">eg. Engineering</option>
+                    <option value="Engineering">Engineering</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="md:mt-8 mt-5 lg:flex items-start">
+              <div class="min-w-60">
+                <div class="form-group md:mb-0 mb-3">
+                  <div>
+                    <input
+                      type="text"
+                      class="form-control gray-500 px-4 py-3.5 rounded-md border w-full"
+                      id="filter"
+                      autocomplete="off"
+                      placeholder="Filter"
+                    />
+                  </div>
+                </div>
+                <ul>
+                  <li
+                    class="capitalize flex items-center px-2 py-3 gray-500 font-medium bc-neutral-50 text-sm rounded-md mt-2"
+                  >
+                    <div>
+                      <img
+                        src="../src/assets/select.svg"
+                        class="w-6 h-6"
+                        alt="select"
+                      />
+                    </div>
+                    <div class="ml-3 mr-2">
+                      <img
+                        src="../src/assets/briefcase.svg"
+                        class="w-6 h-6"
+                        alt="briefcase"
+                      />
+                    </div>
+                    Key responsibilities
+                  </li>
+                  <li
+                    class="capitalize flex items-center px-2 py-3 gray-500 font-medium bc-neutral-50 text-sm rounded-md mt-2"
+                  >
+                    <div>
+                      <img
+                        src="../src/assets/select.svg"
+                        class="w-6 h-6"
+                        alt="select"
+                      />
+                    </div>
+                    <div class="ml-3 mr-2">
+                      <img
+                        src="../src/assets/timer.svg"
+                        class="w-6 h-6"
+                        alt="timer"
+                      />
+                    </div>
+                    Application deadline
+                  </li>
+                  <li
+                    class="capitalize flex items-center px-2 py-3 gray-500 font-medium bc-neutral-50 text-sm rounded-md mt-2"
+                  >
+                    <div>
+                      <img
+                        src="../src/assets/select.svg"
+                        class="w-6 h-6"
+                        alt="select"
+                      />
+                    </div>
+                    <div class="ml-3 mr-2">
+                      <img
+                        src="../src/assets/briefcase.svg"
+                        class="w-6 h-6"
+                        alt="briefcase"
+                      />
+                    </div>
+                    Job description
+                  </li>
+                  <li
+                    class="capitalize flex items-center px-2 py-3 gray-500 font-medium bc-neutral-50 text-sm rounded-md mt-2"
+                  >
+                    <div>
+                      <img
+                        src="../src/assets/select.svg"
+                        class="w-6 h-6"
+                        alt="select"
+                      />
+                    </div>
+                    <div class="ml-3 mr-2">
+                      <img
+                        src="../src/assets/grid.svg"
+                        class="w-6 h-6"
+                        alt="grid"
+                      />
+                    </div>
+                    Job overview
+                  </li>
+                  <li
+                    class="capitalize flex items-center px-2 py-3 gray-500 font-medium bc-neutral-50 text-sm rounded-md mt-2"
+                  >
+                    <div>
+                      <img
+                        src="../src/assets/select.svg"
+                        class="w-6 h-6"
+                        alt="select"
+                      />
+                    </div>
+                    <div class="ml-3 mr-2">
+                      <img
+                        src="../src/assets/location.png"
+                        class="w-6 h-6"
+                        alt="location"
+                      />
+                    </div>
+                    Job location
+                  </li>
+                  <li
+                    class="capitalize flex items-center px-2 py-3 gray-500 font-medium bc-neutral-50 text-sm rounded-md mt-2"
+                  >
+                    <div>
+                      <img
+                        src="../src/assets/select.svg"
+                        class="w-6 h-6"
+                        alt="select"
+                      />
+                    </div>
+                    <div class="ml-3 mr-2">
+                      <img
+                        src="../src/assets/money.svg"
+                        class="w-6 h-6"
+                        alt="money"
+                      />
+                    </div>
+                    Salary range
+                  </li>
+                  <li
+                    class="capitalize flex items-center px-2 py-3 gray-500 font-medium bc-neutral-50 text-sm rounded-md mt-2"
+                  >
+                    <div>
+                      <img
+                        src="../src/assets/select.svg"
+                        class="w-6 h-6"
+                        alt="select"
+                      />
+                    </div>
+                    <div class="ml-3 mr-2">
+                      <img
+                        src="../src/assets/tick-circle.svg"
+                        class="w-6 h-6"
+                        alt="tick-circle"
+                      />
+                    </div>
+                    Qualifications
+                  </li>
+                  <li
+                    class="capitalize flex items-center px-2 py-3 gray-500 font-medium bc-neutral-50 text-sm rounded-md mt-2"
+                  >
+                    <div>
+                      <img
+                        src="../src/assets/select.svg"
+                        class="w-6 h-6"
+                        alt="select"
+                      />
+                    </div>
+                    <div class="ml-3 mr-2">
+                      <img
+                        src="../src/assets/message-question.svg"
+                        class="w-6 h-6"
+                        alt="tick-circle"
+                      />
+                    </div>
+                    Why join us
+                  </li>
+                </ul>
+              </div>
+              <div class="lg:ml-6 w-full">
+                <div>
+                  <div class="py-3 px-4 bc-gray-100 rounded-md mb-2.5">
+                    <div class="flex items-center justify-between">
+                      <div>
+                        <img src="../src/assets/select-gray.svg" alt="select" />
+                      </div>
+                      <div
+                        class="shadow bg-white p-2 rounded-full flex items-center"
+                      >
+                        Remove
+                        <img
+                          src="../src/assets/x-lg.svg"
+                          class="ml-2"
+                          alt="x-lg"
+                        />
+                      </div>
+                    </div>
+                    <div class="mt-2.5">
+                      <div class="form-group border-0 md:mb-0 mb-3 w-2/3">
+                        <label
+                          for="job-location"
+                          class="mb-2.5 gray-800 font-semibold text-sm block"
+                          >Job Location</label
+                        >
+                        <div>
+                          <select
+                            id="job-category"
+                            class="form-control bg-white px-4 py-3.5 rounded-md border w-full"
+                          >
+                            <option value="" selected="">
+                              eg. Job Location
+                            </option>
+                            <option value="Job Location">Job Location</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="py-3 px-4 bc-gray-100 rounded-md mb-2.5">
+                    <div class="flex items-center justify-between">
+                      <div>
+                        <img src="../src/assets/select-gray.svg" alt="select" />
+                      </div>
+                      <div
+                        class="shadow bg-white p-2 rounded-full flex items-center"
+                      >
+                        Remove
+                        <img
+                          src="../src/assets/x-lg.svg"
+                          class="ml-2"
+                          alt="x-lg"
+                        />
+                      </div>
+                    </div>
+                    <div class="mt-2.5">
+                      <div class="form-group border-0 md:mb-0 mb-3 w-2/3">
+                        <label
+                          for="application-deadline"
+                          class="mb-2.5 gray-800 font-semibold text-sm block"
+                          >Application Deadline</label
+                        >
+                        <div>
+                          <input
+                            type="date"
+                            class="form-control bg-white px-4 py-3.5 rounded-md border w-full"
+                            id="application-deadline"
+                            autocomplete="off"
+                            placeholder="eg. Frontend Developer"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="py-3 px-4 bc-gray-100 rounded-md mb-2.5">
+                    <div class="flex items-center justify-between">
+                      <div>
+                        <img src="../src/assets/select-gray.svg" alt="select" />
+                      </div>
+                      <div
+                        class="shadow bg-white p-2 rounded-full flex items-center"
+                      >
+                        Remove
+                        <img
+                          src="../src/assets/x-lg.svg"
+                          class="ml-2"
+                          alt="x-lg"
+                        />
+                      </div>
+                    </div>
+                    <div class="mt-2.5">
+                      <div class="form-group border-0 md:mb-0 mb-3 w-2/3">
+                        <label
+                          for="application-deadline"
+                          class="mb-2.5 gray-800 font-semibold text-sm block"
+                          >Salary Range</label
+                        >
+                        <div>
+                          <select
+                            id="application-deadline"
+                            class="form-control bg-white px-4 py-3.5 rounded-md border w-full"
+                          >
+                            <option value="" selected="">eg. $1k to $5k</option>
+                            <option value="$1k to $5k">$1k to $5k</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="py-3 px-4 bc-gray-100 rounded-md mb-2.5">
+                    <div class="flex items-center justify-between">
+                      <div>
+                        <img src="../src/assets/select-gray.svg" alt="select" />
+                      </div>
+                      <div
+                        class="shadow bg-white p-2 rounded-full flex items-center"
+                      >
+                        Remove
+                        <img
+                          src="../src/assets/x-lg.svg"
+                          class="ml-2"
+                          alt="x-lg"
+                        />
+                      </div>
+                    </div>
+                    <div class="mt-2.5">
+                      <div class="form-group border-0 md:mb-0 mb-3 w-2/3">
+                        <label
+                          for="job-description"
+                          class="mb-2.5 gray-800 font-semibold text-sm block"
+                          >Job Description</label
+                        >
+                        <div>
+                          <textarea
+                            id="job-description"
+                            class="form-control bg-white px-4 py-3.5 rounded-md border w-full"
+                          ></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step_2 hidden" id="step_2">
+            <div>
+              <h6 class="text-lg gray-800 font-medium">
+                Application Questions
+              </h6>
+              <p class="gray-500">
+                Talents are prompted to answer these questions during
+                application
+              </p>
+              <div class="">
+                <ul>
+                  <li
+                    class="px-5 py-4.5 rounded-md flex items-center justify-between mt-4 badge_success"
+                  >
+                    <div class="flex items-center">
+                      <img
+                        src="../src/assets/tick-circle-green.svg"
+                        alt="tick-circle-green"
+                      />
+                      <span class="font-15 ml-10"
+                        >Why are you the best candidate for the job?</span
+                      >
+                    </div>
+                    <div class="flex items-center">
+                      <button
+                        type="button"
+                        name="edit_question"
+                        class="mr-2.5 gray-800 font-15 font-medium open-sub-popup"
+                      >
+                        Edit
+                      </button>
+                      <span><img src="../src/assets/x.svg" alt="x" /></span>
+                    </div>
+                  </li>
+                  <li
+                    class="px-5 py-4.5 rounded-md flex items-center justify-between mt-4 badge_success"
+                  >
+                    <div class="flex items-center">
+                      <img
+                        src="../src/assets/tick-circle-green.svg"
+                        alt="tick-circle-green"
+                      />
+                      <span class="font-15 ml-10"
+                        >Have you worked in this role before?</span
+                      >
+                    </div>
+                    <div class="flex items-center">
+                      <button
+                        type="button"
+                        name="edit_question"
+                        class="mr-2.5 gray-800 font-15 font-medium open-sub-popup"
+                      >
+                        Edit
+                      </button>
+                      <span><img src="../src/assets/x.svg" alt="x" /></span>
+                    </div>
+                  </li>
+                  <li
+                    class="px-5 py-4.5 rounded-md flex items-center justify-between mt-4 badge_success"
+                  >
+                    <div class="flex items-center">
+                      <img
+                        src="../src/assets/tick-circle-green.svg"
+                        alt="tick-circle-green"
+                      />
+                      <span class="font-15 ml-10"
+                        >Can you please tell me more about the responsibilities
+                        in your current role?</span
+                      >
+                    </div>
+                    <div class="flex items-center">
+                      <button
+                        type="button"
+                        name="edit_question"
+                        class="mr-2.5 gray-800 font-15 font-medium open-sub-popup"
+                      >
+                        Edit
+                      </button>
+                      <span><img src="../src/assets/x.svg" alt="x" /></span>
+                    </div>
+                  </li>
+                </ul>
+                <div
+                  class="rounded-md flex items-center justify-between mt-4 badge_alert_white"
+                >
+                  <button
+                    type="button"
+                    name="edit_question"
+                    class="mr-2.5 px-5 py-4.5 gray-800 font-15 font-medium w-full flex items-center open-sub-popup"
+                  >
+                    <img src="../src/assets/plus.svg" alt="tick-circle-green" />
+                    <span class="font-15 ml-10">Add question</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step_3 hidden" id="step_3">
+            <div class="md:grid grid-cols-2 gap-4">
+              <div class="form-group md:mb-0 mb-3">
+                <label
+                  for="job-title"
+                  class="mb-2.5 gray-800 font-semibold text-sm block"
+                  >job-title</label
+                >
+                <div>
+                  <input
+                    type="text"
+                    class="form-control px-4 py-3.5 rounded-md border w-full"
+                    id="job-title"
+                    autocomplete="off"
+                    placeholder="eg. Frontend Developer"
+                  />
+                </div>
+              </div>
+              <div class="form-group md:mb-0 mb-3">
+                <label
+                  for="job-category"
+                  class="mb-2.5 gray-800 font-semibold text-sm block"
+                  >Job Category</label
+                >
+                <div>
+                  <select
+                    id="job-category"
+                    class="form-control px-4 py-3.5 rounded-md border w-full"
+                  >
+                    <option value="" selected="">eg. Engineering</option>
+                    <option value="Engineering">Engineering</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="md:mt-8 mt-5">
+              <div>
+                <div class="py-3 px-4 bc-gray-100 rounded-md mb-2.5">
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <img src="../src/assets/select-gray.svg" alt="select" />
+                    </div>
+                    <div
+                      class="shadow bg-white p-2 rounded-full flex items-center"
+                    >
+                      Remove
+                      <img
+                        src="../src/assets/x-lg.svg"
+                        class="ml-2"
+                        alt="x-lg"
+                      />
+                    </div>
+                  </div>
+                  <div class="mt-2.5">
+                    <div class="form-group border-0 md:mb-0 mb-3 w-2/3">
+                      <label
+                        for="job-location"
+                        class="mb-2.5 gray-800 font-semibold text-sm block"
+                        >Job Location</label
+                      >
+                      <div>
+                        <select
+                          id="job-category"
+                          class="form-control bg-white px-4 py-3.5 rounded-md border w-full"
+                        >
+                          <option value="" selected="">eg. Job Location</option>
+                          <option value="Job Location">Job Location</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="py-3 px-4 bc-gray-100 rounded-md mb-2.5">
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <img src="../src/assets/select-gray.svg" alt="select" />
+                    </div>
+                    <div
+                      class="shadow bg-white p-2 rounded-full flex items-center"
+                    >
+                      Remove
+                      <img
+                        src="../src/assets/x-lg.svg"
+                        class="ml-2"
+                        alt="x-lg"
+                      />
+                    </div>
+                  </div>
+                  <div class="mt-2.5">
+                    <div class="form-group border-0 md:mb-0 mb-3 w-2/3">
+                      <label
+                        for="application-deadline"
+                        class="mb-2.5 gray-800 font-semibold text-sm block"
+                        >Application Deadline</label
+                      >
+                      <div>
+                        <input
+                          type="date"
+                          class="form-control bg-white px-4 py-3.5 rounded-md border w-full"
+                          id="application-deadline"
+                          autocomplete="off"
+                          placeholder="eg. Frontend Developer"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="py-3 px-4 bc-gray-100 rounded-md mb-2.5">
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <img src="../src/assets/select-gray.svg" alt="select" />
+                    </div>
+                    <div
+                      class="shadow bg-white p-2 rounded-full flex items-center"
+                    >
+                      Remove
+                      <img
+                        src="../src/assets/x-lg.svg"
+                        class="ml-2"
+                        alt="x-lg"
+                      />
+                    </div>
+                  </div>
+                  <div class="mt-2.5">
+                    <div class="form-group border-0 md:mb-0 mb-3 w-2/3">
+                      <label
+                        for="application-deadline"
+                        class="mb-2.5 gray-800 font-semibold text-sm block"
+                        >Salary Range</label
+                      >
+                      <div>
+                        <select
+                          id="application-deadline"
+                          class="form-control bg-white px-4 py-3.5 rounded-md border w-full"
+                        >
+                          <option value="" selected="">eg. $1k to $5k</option>
+                          <option value="$1k to $5k">$1k to $5k</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="py-3 px-4 bc-gray-100 rounded-md mb-2.5">
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <img src="../src/assets/select-gray.svg" alt="select" />
+                    </div>
+                    <div
+                      class="shadow bg-white p-2 rounded-full flex items-center"
+                    >
+                      Remove
+                      <img
+                        src="../src/assets/x-lg.svg"
+                        class="ml-2"
+                        alt="x-lg"
+                      />
+                    </div>
+                  </div>
+                  <div class="mt-2.5">
+                    <div class="form-group border-0 md:mb-0 mb-3 w-2/3">
+                      <label
+                        for="job-description"
+                        class="mb-2.5 gray-800 font-semibold text-sm block"
+                        >Job Description</label
+                      >
+                      <div>
+                        <textarea
+                          id="job-description"
+                          class="form-control bg-white px-4 py-3.5 rounded-md border w-full"
+                        ></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="font-medium gray-600 text-sm">
+                  <span class="text-lg gray-800">Application Questions</span>
+                  Talents are prompted to answer these questions during
+                  application
+                </div>
+                <ul>
+                  <li
+                    class="px-5 py-4.5 rounded-md flex items-center justify-between mt-4 badge_success"
+                  >
+                    <div class="flex items-center">
+                      <img
+                        src="../src/assets/tick-circle-green.svg"
+                        alt="tick-circle-green"
+                      />
+                      <span class="font-15 ml-10"
+                        >Why are you the best candidate for the job?</span
+                      >
+                    </div>
+                    <div class="flex items-center">
+                      <button
+                        type="button"
+                        class="mr-2.5 gray-800 font-15 font-medium"
+                      >
+                        Edit
+                      </button>
+                      <span><img src="../src/assets/x.svg" alt="x" /></span>
+                    </div>
+                  </li>
+                  <li
+                    class="px-5 py-4.5 rounded-md flex items-center justify-between mt-4 badge_success"
+                  >
+                    <div class="flex items-center">
+                      <img
+                        src="../src/assets/tick-circle-green.svg"
+                        alt="tick-circle-green"
+                      />
+                      <span class="font-15 ml-10"
+                        >What is your experience working on crypto apps?</span
+                      >
+                    </div>
+                    <div class="flex items-center">
+                      <button
+                        type="button"
+                        class="mr-2.5 gray-800 font-15 font-medium"
+                      >
+                        Edit
+                      </button>
+                      <span><img src="../src/assets/x.svg" alt="x" /></span>
+                    </div>
+                  </li>
+                </ul>
+                <div class="bc-gray-300 h-0.5 md:my-8 my-4"></div>
+                <div class="w-2/3">
+                  <div class="form-group md:mb-3 mb-3">
+                    <label
+                      for="reason-for-role"
+                      class="mb-2.5 gray-800 font-semibold text-sm block"
+                      >Reason for Role</label
+                    >
+                    <div>
+                      <select
+                        id="reason-for-role"
+                        class="form-control px-4 py-3.5 rounded-md border w-full"
+                      >
+                        <option value="" selected="">
+                          eg. Temporary/Contract Position
+                        </option>
+                        <option value="Temporary/Contract Position">
+                          Temporary/Contract Position
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group md:mb-3 mb-3">
+                    <label
+                      for="reason-for-role"
+                      class="mb-2.5 gray-800 font-semibold text-sm block"
+                      >Additional Note/Comment</label
+                    >
+                    <div>
+                      <textarea
+                        id="reason-for-role"
+                        class="form-control px-4 py-3.5 rounded-md border w-full"
+                        placeholder="Enter additional note/comment here"
+                      >
+                      </textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-between md:mt-8 mt-4">
+            <button
+              type="button"
+              id="step_continue_btn"
+              class="capitalize flex items-center sm:justify-between justify-center bc-emerald-800 text-white px-4 py-2.5 rounded-lg font-semibold md:mt-0 mt-3 sm:w-auto w-full"
+            >
+              Continue
+            </button>
+            <button
+              type="button"
+              name="job_posting"
+              class="capitalize flex items-center sm:justify-between justify-center bc-gray-100 gray-800 px-4 py-2.5 rounded-lg font-semibold md:mt-0 mt-3 sm:w-auto w-full hide_popup"
+            >
+              Cancel Operation
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="overlay"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../src/js/common.js"></script>
+    <script src="../src/js/index.js"></script>
+  </body>
+</html>
